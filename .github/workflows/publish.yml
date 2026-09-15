@@ -1,8 +1,8 @@
 # Goes in .github/workflows/publish.yml in the infrasos-docs repository.
 #
-# It lives here because the thing it builds is assembled here: docs/site/build.py takes the guides
-# that ship inside AD Command and produces the MkDocs project. Keeping the workflow beside the
-# generator means the two are changed together rather than one of them being discovered stale.
+# It lives in the AD Command repository because the thing it publishes is assembled there:
+# docs/site/build.py takes the guides that ship inside the product and produces this project.
+# Keeping the workflow beside the generator means the two change together.
 name: Publish
 
 on:
@@ -11,21 +11,22 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
-# One publish at a time. Two overlapping runs would race to push the same branch, and the loser
-# would silently publish the older tree.
+# One publish at a time. Two overlapping runs would both commit to gh-pages and the loser would
+# either conflict or silently publish the older tree.
 concurrency:
-  group: pages
+  group: publish
   cancel-in-progress: false
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # mike commits to gh-pages, so it needs the branch, not just this commit.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -34,21 +35,42 @@ jobs:
       - name: Install the pinned toolchain
         run: pip install -r requirements.txt
 
-      - name: Build
-        # --strict, so a broken internal link fails the build rather than publishing a 404 that
-        # nobody notices until a customer follows it.
-        run: mkdocs build --strict
+      - name: Read the version being published
+        id: version
+        run: echo "value=$(cat docs-version.txt)" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
+      - name: Check the site builds
+        # --strict first and separately, so a broken internal link fails BEFORE anything is
+        # committed to gh-pages. mike would otherwise publish it and report success.
+        run: mkdocs build --strict --site-dir /tmp/strict-check
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy ${{ steps.version.outputs.value }}
+        # --update-aliases moves "latest" onto this version. Without it a second deploy of the same
+        # alias fails rather than replacing it.
+        run: |
+          git fetch origin gh-pages --depth=1 || echo "No gh-pages branch yet; mike will create it."
+          mike deploy --push --update-aliases "${{ steps.version.outputs.value }}" latest
+          mike set-default --push latest
+
+      - name: Keep the custom domain
+        # GitHub Pages reads CNAME from the ROOT of the published branch. mike owns the version
+        # directories, index.html and versions.json, and leaves everything else alone - so this only
+        # has to write the file when it is missing, which is the first publish and after any manual
+        # reset of the branch.
+        run: |
+          git fetch origin gh-pages
+          git worktree add ../pages gh-pages
+          if [ "$(cat ../pages/CNAME 2>/dev/null)" != "$(cat CNAME)" ]; then
+            cp CNAME ../pages/CNAME
+            git -C ../pages add CNAME
+            git -C ../pages commit -m "Set the custom domain"
+            git -C ../pages push origin gh-pages
+            echo "CNAME written to the gh-pages root."
+          else
+            echo "CNAME already correct."
+          fi
