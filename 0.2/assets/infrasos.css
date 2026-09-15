@@ -54,3 +54,13 @@
   border-radius: 0 0.4rem 0.4rem 0;
   font-size: 0.8rem;
 }
+
+/* Diagrams. Authored as SVG and shipped with the site rather than rendered in the browser: Material
+   carries Mermaid's theming but not the library, so a mermaid fence produced a block that silently
+   never became a diagram - and the strict build passed. */
+.md-typeset figure img[src$=".svg"],
+.md-typeset p > img[src$=".svg"] {
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+}

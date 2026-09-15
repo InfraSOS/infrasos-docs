@@ -12,13 +12,13 @@
         <meta name="author" content="InfraSOS FZCO">
       
       
-        <link rel="canonical" href="https://docs.infrasos.com/0.2/ad-command/troubleshooting/">
+        <link rel="canonical" href="https://docs.infrasos.com/0.2/ad-command/architecture/">
       
       
-        <link rel="prev" href="../operations/">
+        <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../../ad-command-pro/">
+        <link rel="next" href="../deploying-a-domain-controller/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Troubleshooting - InfraSOS Documentation</title>
+        <title>Architecture - InfraSOS Documentation</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshooting" class="md-skip">
+        <a href="#architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshooting
+              Architecture
             
           </span>
         </div>
@@ -515,10 +515,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -534,6 +561,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-it-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where it runs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nothing-writes-to-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nothing writes to Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-runs-on-its-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What runs on its own
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What runs on its own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-the-snapshot-counts-once-a-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the snapshot counts once a day
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measured-on-a-domain-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measured on a domain controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-never-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it never does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-it-keeps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data it keeps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -655,37 +813,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Troubleshooting
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
@@ -701,92 +832,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-console-will-not-load" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The console will not load
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-security-page-says-nothing-is-being-recorded" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The security page says nothing is being recorded
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-finding-i-fixed-still-shows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A finding I fixed still shows
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-score-dropped-and-nothing-changed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The score dropped and nothing changed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#replication-or-dns-looks-wrong" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Replication or DNS looks wrong
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collecting-evidence-for-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Collecting evidence for support
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -907,10 +952,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-console-will-not-load" class="md-nav__link">
+  <a href="#where-it-runs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The console will not load
+        Where it runs
       
     </span>
   </a>
@@ -918,10 +963,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-security-page-says-nothing-is-being-recorded" class="md-nav__link">
+  <a href="#the-parts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The security page says nothing is being recorded
+        The parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nothing-writes-to-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nothing writes to Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
       
     </span>
   </a>
@@ -929,10 +1002,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-finding-i-fixed-still-shows" class="md-nav__link">
+  <a href="#what-runs-on-its-own" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A finding I fixed still shows
+        What runs on its own
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What runs on its own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-the-snapshot-counts-once-a-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the snapshot counts once a day
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measured-on-a-domain-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measured on a domain controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-never-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it never does
       
     </span>
   </a>
@@ -940,32 +1052,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-score-dropped-and-nothing-changed" class="md-nav__link">
+  <a href="#data-it-keeps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The score dropped and nothing changed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#replication-or-dns-looks-wrong" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Replication or DNS looks wrong
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collecting-evidence-for-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Collecting evidence for support
+        Data it keeps
       
     </span>
   </a>
@@ -989,46 +1079,167 @@
 
 
 
-<!-- Generated from docs/product/40-troubleshooting.md in the AD Command repository. Do not edit here: see
-     docs/site/README.md. The copy that ships inside the product is the source of truth. -->
-
-<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
-<h2 id="the-console-will-not-load">The console will not load<a class="headerlink" href="#the-console-will-not-load" title="Permanent link">&para;</a></h2>
-<p>Check the service is running:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Get-Service InfraSOSADCommand
-</code></pre></div>
-<p>It starts as Automatic (Delayed Start), so after a reboot it deliberately waits for AD DS, DNS and
-Netlogon to settle before starting. Give it a minute.</p>
-<p>If it is running and the page does not load, check you are reaching port 8443 from inside the VPC.
-The firewall rule permits the instance's VPC ranges and nothing else.</p>
-<p>Startup failures are reported to the Windows Application event log, which is readable even when the
-console is not.</p>
-<h2 id="the-security-page-says-nothing-is-being-recorded">The security page says nothing is being recorded<a class="headerlink" href="#the-security-page-says-nothing-is-being-recorded" title="Permanent link">&para;</a></h2>
-<p><strong>Monitoring</strong> reads the Windows Security log. If the audit subcategories it depends on are switched
-off, there is nothing to read - and an empty list means "nothing is being recorded", not "nothing
-happened". The page says which of the two applies.</p>
-<p>Finding <code>SEC-AUDIT-001</code> on the Security page lists the subcategories that are missing and how to
-enable them.</p>
-<h2 id="a-finding-i-fixed-still-shows">A finding I fixed still shows<a class="headerlink" href="#a-finding-i-fixed-still-shows" title="Permanent link">&para;</a></h2>
-<p>Findings are as fresh as the last scan. Use <strong>Run new scan</strong> on the Security page; it evaluates the
-whole pack against the live directory rather than re-reading a cache.</p>
-<p>If the finding still shows, the scan is telling you the change did not take effect. Group Policy
-settings need to replicate and refresh - <code>gpupdate /force</code> on the domain controller, then scan again.</p>
-<p>Some findings report a count rather than a pass or fail. Removing three of five over-privileged
-accounts leaves the control failing and the score unchanged; the scan reports it as a finding
-updated, which is the product telling you the work registered.</p>
-<h2 id="the-score-dropped-and-nothing-changed">The score dropped and nothing changed<a class="headerlink" href="#the-score-dropped-and-nothing-changed" title="Permanent link">&para;</a></h2>
-<p>Check the control-pack version. Adding controls lowers scores without anything on the machine
-changing, which is why scores are only comparable within one pack version and why the page says so
-rather than showing a delta across the change.</p>
-<h2 id="replication-or-dns-looks-wrong">Replication or DNS looks wrong<a class="headerlink" href="#replication-or-dns-looks-wrong" title="Permanent link">&para;</a></h2>
-<p><strong>Domain Health</strong> reports what the directory says about itself. The product does not modify
-replication or DNS - it reads and reports. Use the finding's evidence to work out which controller
-disagrees with which, then resolve it with the usual Active Directory tools.</p>
-<h2 id="collecting-evidence-for-support">Collecting evidence for support<a class="headerlink" href="#collecting-evidence-for-support" title="Permanent link">&para;</a></h2>
-<p><strong>Support</strong> produces a zip with everything the product knows about its own state, including the
-logs. Attach it to the request. It is usually the difference between a description of a problem and
-a diagnosis of one.</p>
+<h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
+<p>How AD Command is put together, what each part talks to, and - the part that matters most on a
+domain controller - what each part costs.</p>
+<h2 id="where-it-runs">Where it runs<a class="headerlink" href="#where-it-runs" title="Permanent link">&para;</a></h2>
+<p>One Windows Service, <code>InfraSOSADCommand</code>, on the domain controller itself. Not an agent reporting to
+a collector, and not a console reaching in from elsewhere: there is no second machine and no second
+thing to install, patch or firewall.</p>
+<figure>
+<p><img alt="How AD Command is deployed" src="../../assets/architecture.svg" /></p>
+<figcaption>
+<p>One service on the controller. One inbound port, and one optional outbound path.</p>
+</figcaption>
+</figure>
+<p>Everything inbound is one port. Everything outbound is your own relay, and only if you configure it.</p>
+<h2 id="the-parts">The parts<a class="headerlink" href="#the-parts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>What it is</th>
+<th>What it touches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kestrel</strong></td>
+<td>The web server, HTTPS on 8443</td>
+<td>Nothing else. Not IIS - there is no web server to install or harden</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td>ASP.NET Core minimal APIs under <code>/api/v1</code></td>
+<td>Everything below</td>
+</tr>
+<tr>
+<td><strong>Directory reader</strong></td>
+<td><code>System.DirectoryServices.Protocols</code> over LDAP</td>
+<td>Active Directory, <strong>read only</strong></td>
+</tr>
+<tr>
+<td><strong>Windows state reader</strong></td>
+<td>Registry, <code>auditpol</code>, service configuration, event log</td>
+<td>The local machine</td>
+</tr>
+<tr>
+<td><strong>Control pack</strong></td>
+<td>The security assessment, versioned separately from the product</td>
+<td>Both readers</td>
+</tr>
+<tr>
+<td><strong>SQLite</strong></td>
+<td>Assessment history, acknowledgements, audit log, schedules, daily counts</td>
+<td>A file in ProgramData</td>
+</tr>
+<tr>
+<td><strong>Console</strong></td>
+<td>React, served as static files by the same Kestrel</td>
+<td>The API, nothing else</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nothing-writes-to-active-directory">Nothing writes to Active Directory<a class="headerlink" href="#nothing-writes-to-active-directory" title="Permanent link">&para;</a></h3>
+<p>Not "writes are restricted" - there is no code path that writes. Every directory operation is a
+search. That is why the product can run as SYSTEM on a controller without that being a risk somebody
+has to accept: the worst an attacker who reached the console could do is read what an administrator
+can already read.</p>
+<p>Directory management is <a href="../../ad-command-pro/">AD Command Pro</a>, which runs on a member server under
+a delegated account, where Active Directory itself enforces what it may do.</p>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>Windows Integrated Authentication - the same identity you already signed in with. There is no
+product account, no password to rotate and nothing to leak.</p>
+<p>Roles come from group membership: <strong>Administrator</strong> from <code>BUILTIN\Administrators</code>, <code>Domain Admins</code>,
+<code>Enterprise Admins</code> or a group you nominate; <strong>Operator</strong> from a group you nominate; everybody else
+is read-only.</p>
+<div class="admonition note">
+<p class="admonition-title">If the console says Read only and you are a Domain Admin</p>
+<p>Windows gave your browser a <em>filtered token</em>, which marks administrative groups deny-only. The
+product is reading your token correctly, and treating a deny-only group as membership would hand
+administrative use of a domain controller to any non-elevated program running as you.</p>
+<p>Negotiate also requires HTTP/1.1 - it is connection-bound and does not work over HTTP/2. Browsers
+handle that themselves; anything scripting the API needs to know it.</p>
+</div>
+<h2 id="what-runs-on-its-own">What runs on its own<a class="headerlink" href="#what-runs-on-its-own" title="Permanent link">&para;</a></h2>
+<p>Four background loops, and their cost is the reason each one is shaped the way it is.</p>
+<table>
+<thead>
+<tr>
+<th>Loop</th>
+<th>How often</th>
+<th>What it reads</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security assessment</strong></td>
+<td>Daily, configurable</td>
+<td>Registry, <code>auditpol</code>, LDAP, a TLS probe per controller</td>
+<td>The most expensive thing the product does. ~125 ms on a small domain</td>
+</tr>
+<tr>
+<td><strong>Event counter</strong></td>
+<td>Continuous</td>
+<td>This controller's Security log</td>
+<td>Counts only. Event bodies are never copied into the database</td>
+</tr>
+<tr>
+<td><strong>Report sweep</strong></td>
+<td>Every minute</td>
+<td><strong>SQLite</strong>, and a local registry read</td>
+<td>Negligible. It asks the database what is due, never the directory</td>
+</tr>
+<tr>
+<td><strong>Directory snapshot</strong></td>
+<td>Six-hourly, <strong>counts once a day</strong></td>
+<td>LDAP</td>
+<td>One pass per day. See below</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-the-snapshot-counts-once-a-day">Why the snapshot counts once a day<a class="headerlink" href="#why-the-snapshot-counts-once-a-day" title="Permanent link">&para;</a></h3>
+<p>LDAP has <strong>no server-side count</strong>. Asking how many users exist means enumerating every user and
+counting them. The daily snapshot does that for users, groups, computers, organisational units and
+four filtered populations - on a fifty-thousand-user estate, six figures of entries.</p>
+<p>The loop ticks every six hours so a controller that is switched off each evening still records the
+day. It checks whether the day already has a row <strong>before</strong> counting, so that cadence costs one pass
+rather than four. The row is keyed on the date and replaced, which is also what keeps the series
+evenly spaced - and an evenly spaced series is the only kind a trend line can honestly be drawn
+from.</p>
+<h3 id="measured-on-a-domain-controller">Measured on a domain controller<a class="headerlink" href="#measured-on-a-domain-controller" title="Permanent link">&para;</a></h3>
+<p>Two vCPUs, Windows Server 2022, product 0.2.86:</p>
+<ul>
+<li><strong>At rest: 0.31% of one core</strong>, 130 MB working set, 26 threads.</li>
+<li>All fourteen scheduled reports rendered back to back: <strong>975 ms wall, 250 ms CPU</strong> combined.</li>
+<li>A full thirty-nine-control security assessment: <strong>~125 ms</strong>.</li>
+</ul>
+<p>Those figures are from a small directory and do not extrapolate; the shapes above do. What scales
+with directory size is anything that enumerates - the snapshot, the group reports, the account
+reports. What does not is the assessment's registry and policy checks, the report sweep, and
+everything the console does between page loads, which is nothing.</p>
+<h2 id="what-it-never-does">What it never does<a class="headerlink" href="#what-it-never-does" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>It does not read other controllers' event logs.</strong> Event logs do not replicate. What monitoring
+  shows is what <em>this</em> controller recorded, and the console says so rather than implying the domain.</li>
+<li><strong>It does not need Internet access.</strong> It ships its own documentation, renders reports with no
+  external assets, and expects a private subnet. This site is an addition, never a replacement.</li>
+<li><strong>It does not phone home.</strong> No telemetry, no licence check, no outbound call of any kind. The only
+  thing that ever leaves is a scheduled report, to your relay, to domains you allowed.</li>
+<li><strong>It does not store credentials.</strong> There is one secret it can hold - an SMTP relay password - and
+  it is protected with DPAPI at machine scope, beside the database and never inside it. No endpoint
+  returns it.</li>
+</ul>
+<h2 id="data-it-keeps">Data it keeps<a class="headerlink" href="#data-it-keeps" title="Permanent link">&para;</a></h2>
+<p>One SQLite file in <code>%ProgramData%\InfraSOS\AD Command</code>, holding assessment history and scores,
+acknowledged risks, the administrator audit log, report schedules and their outcomes, event counts,
+and the daily directory counts.</p>
+<p>It holds <strong>no directory content</strong>: no account names beyond what an audit entry needs to be
+meaningful, no group memberships, no event bodies. A copy taken for support describes what the
+product did, not what your directory contains - with one exception worth knowing, which is that the
+support bundle includes the current security assessment, and that describes where your domain is
+weak. Treat it accordingly.</p>
 
 
 
