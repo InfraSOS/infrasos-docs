@@ -37,6 +37,10 @@
          <lastmod>2026-09-15</lastmod>
     </url>
     <url>
+         <loc>https://docs.infrasos.com/0.2/ad-command/scheduled-reports/</loc>
+         <lastmod>2026-09-15</lastmod>
+    </url>
+    <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/scoring/</loc>
          <lastmod>2026-09-15</lastmod>
     </url>
@@ -46,6 +50,10 @@
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/troubleshooting/</loc>
+         <lastmod>2026-09-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.infrasos.com/0.2/ad-command/users-and-groups/</loc>
          <lastmod>2026-09-15</lastmod>
     </url>
 </urlset>
