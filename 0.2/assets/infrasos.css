@@ -1,0 +1,56 @@
+/*
+ * The InfraSOS palette, taken from src/InfraSOS.AD.Web/src/theme/brand.ts so the site and the
+ * console are the same product to look at. Kept as tokens rather than scattered hex values for the
+ * same reason the console does.
+ */
+:root {
+  --infrasos-azure: #0078d4;
+  --infrasos-cyan:  #38bdf8;
+  --infrasos-deck:  #0f1626;
+  --infrasos-ink:   #141b2b;
+  --infrasos-muted: #5a6b85;
+  --infrasos-line:  #e7ecf4;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        var(--infrasos-deck);
+  --md-primary-fg-color--light: #1c2740;
+  --md-primary-fg-color--dark:  #0b111d;
+  --md-accent-fg-color:         var(--infrasos-azure);
+  --md-typeset-a-color:         var(--infrasos-azure);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        var(--infrasos-deck);
+  --md-primary-fg-color--light: #1c2740;
+  --md-primary-fg-color--dark:  #0b111d;
+  --md-accent-fg-color:         var(--infrasos-cyan);
+  --md-typeset-a-color:         var(--infrasos-cyan);
+}
+
+
+.status {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.status.available { background: #e6f4e6; color: #1f6b2f; }
+.status.soon      { background: #f1f4f9; color: var(--infrasos-muted); }
+
+[data-md-color-scheme="slate"] .status.available { background: #1d3a22; color: #9fdcab; }
+[data-md-color-scheme="slate"] .status.soon      { background: #1c2740; color: #9bb0d0; }
+
+/* An offline product documenting itself: the note that its own guides work without a network
+   needs to stand out from ordinary prose, because it is the reason the site is not the only copy. */
+.offline-note {
+  border-left: 3px solid var(--infrasos-azure);
+  background: var(--md-code-bg-color);
+  padding: 0.8rem 1rem;
+  border-radius: 0 0.4rem 0.4rem 0;
+  font-size: 0.8rem;
+}
