@@ -43,8 +43,11 @@ with.
 
 ## How to reach us
 
-Support for AD Command is provided through the support contact on its **AWS Marketplace listing**,
-which is the channel tied to your subscription.
+Send your request through the **[InfraSOS contact form](https://infrasos.com/contacts/)**.
+
+Attach the support bundle and include the one sentence above about what you expected and what
+happened instead. If the bundle is too large for the form, say so in the message and we will give
+you somewhere to put it.
 
 ## What is not supported
 
