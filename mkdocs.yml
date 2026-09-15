@@ -1,0 +1,98 @@
+# Material for MkDocs configuration for docs.infrasos.com.
+#
+# Assembled by docs/site/build.py, which copies this file and the pages beside it into a build
+# directory together with the product guides. Do not run mkdocs against this directory directly:
+# the guide pages do not exist here, by design - see README.md.
+
+site_name: InfraSOS Documentation
+site_url: https://docs.infrasos.com/
+site_description: Documentation for InfraSOS AD Command - Active Directory deployment, security, health and monitoring.
+site_author: InfraSOS FZCO
+copyright: Copyright &copy; 2026 InfraSOS FZCO
+
+repo_url: https://github.com/InfraSOS/infrasos-docs
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    # The product itself is a light console with a dark rail. The site follows the reader's own
+    # setting rather than imposing one, because documentation is read in both.
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - assets/infrasos.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  # Material's icon shortcodes. Without this, ":material-arrow-right:" renders as those literal
+  # characters on the page - which is exactly how it shipped in the first build.
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.blocks.caption
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/InfraSOS
+      name: InfraSOS on GitHub
+  generator: false
+
+nav:
+  # Top-level entries become tabs, and Home is one of them - matching
+  # docs.cloudinfrastructureservices.co.uk, which is the house layout for these sites.
+  - Home: index.md
+  - AD Command:
+      - ad-command/index.md
+      - Getting started: ad-command/getting-started.md
+      - Deploying a domain controller: ad-command/deploying-a-domain-controller.md
+      - The security assessment: ad-command/security-assessment.md
+      - Scoring: ad-command/scoring.md
+      - Operations: ad-command/operations.md
+      - Troubleshooting: ad-command/troubleshooting.md
+  - AD Command Pro: ad-command-pro.md
+  - 365 Command: 365-command.md
+  - Support: support.md

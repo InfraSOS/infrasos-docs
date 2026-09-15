@@ -1,0 +1,10 @@
+# Pinned, not floated.
+#
+# The Material for MkDocs authors have announced that MkDocs 2.0 removes the plugin system and the
+# theming system with no migration path, and that it is currently unlicensed. Every build prints a
+# warning about it. Whatever comes of that, a documentation site should not rebuild differently on a
+# Tuesday because an upstream major version shipped - so the toolchain is pinned and moved
+# deliberately.
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+mike==2.2.0

@@ -1,0 +1,54 @@
+# Goes in .github/workflows/publish.yml in the infrasos-docs repository.
+#
+# It lives here because the thing it builds is assembled here: docs/site/build.py takes the guides
+# that ship inside AD Command and produces the MkDocs project. Keeping the workflow beside the
+# generator means the two are changed together rather than one of them being discovered stale.
+name: Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One publish at a time. Two overlapping runs would race to push the same branch, and the loser
+# would silently publish the older tree.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the pinned toolchain
+        run: pip install -r requirements.txt
+
+      - name: Build
+        # --strict, so a broken internal link fails the build rather than publishing a 404 that
+        # nobody notices until a customer follows it.
+        run: mkdocs build --strict
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
