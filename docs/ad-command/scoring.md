@@ -126,7 +126,8 @@ changes achievable scores, so every `Score`, report and API response carries
 
 ## Trend
 
-Every assessment is recorded - value, band, counts and the status of each individual control - and
+Every **scheduled** assessment is recorded - value, band, counts and the status of each individual
+control - and
 each new assessment is reported against the one before it. The comparison is by control, not by
 number:
 
@@ -140,6 +141,12 @@ number:
   stored alongside the status and compared with it.
 - A control with **no history** - one a newer control pack introduced - counts as neither. Calling
   it "newly failing" would blame a customer for a control the product only just started shipping.
+
+A scan you run yourself from the console is **not** recorded. Only the unattended schedule writes
+history, so the series stays evenly spaced whether or not anybody has the page open - a trend built
+from points clustered around somebody's working day describes the working day, not the domain. It
+also means two on-demand scans in a row compare against the same point, which is the last scheduled
+run rather than each other.
 
 The first assessment on a domain has nothing to compare with, and says so; it is not reported as a
 delta of zero. History is capped at the most recent 400 runs so a domain controller that is never

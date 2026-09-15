@@ -9,8 +9,9 @@ and scores the result.
 ## Reading the page
 
 It leads with a count of things to fix rather than a percentage, because the count is what you act
-on. Below it is the movement since the previous scan - "up from 20% on 8 September, 3 issues fixed" -
-and one recommended starting point.
+on. Below it is the movement since the last **scheduled** scan - "up from 20% on 8 September,
+3 issues fixed" - and one recommended starting point. A scan you run yourself is not recorded, so
+running two in a row compares both against the same point rather than against each other.
 
 Findings are listed worst first. Expanding one shows the evidence the product read, how to fix it,
 and any caution worth knowing before you do.

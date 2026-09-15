@@ -97,6 +97,8 @@ nav:
       - Architecture: ad-command/architecture.md
       - Deploying a domain controller: ad-command/deploying-a-domain-controller.md
       - The security assessment: ad-command/security-assessment.md
+      - Users, groups and reports: ad-command/users-and-groups.md
+      - Scheduled reports: ad-command/scheduled-reports.md
       - Scoring: ad-command/scoring.md
       - Operations: ad-command/operations.md
       - Troubleshooting: ad-command/troubleshooting.md

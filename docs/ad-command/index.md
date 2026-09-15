@@ -74,7 +74,8 @@ domains an administrator has allowed, because the attachment contains directory 
 New to the product: [Getting started](getting-started.md), then
 [Deploying a domain controller](deploying-a-domain-controller.md).
 
-Already running it: [The security assessment](security-assessment.md) and
+Already running it: [The security assessment](security-assessment.md),
+[Users, groups and reports](users-and-groups.md), [Scheduled reports](scheduled-reports.md) and
 [Operations](operations.md).
 
 Something is wrong: [Troubleshooting](troubleshooting.md).
