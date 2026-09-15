@@ -94,6 +94,7 @@ nav:
   - AD Command:
       - ad-command/index.md
       - Getting started: ad-command/getting-started.md
+      - Architecture: ad-command/architecture.md
       - Deploying a domain controller: ad-command/deploying-a-domain-controller.md
       - The security assessment: ad-command/security-assessment.md
       - Scoring: ad-command/scoring.md
