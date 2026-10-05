@@ -103,5 +103,15 @@ nav:
       - Operations: ad-command/operations.md
       - Troubleshooting: ad-command/troubleshooting.md
   - AD Command Pro: ad-command-pro.md
-  - 365 Command: 365-command.md
+  - 365 Command:
+      - 365-command/index.md
+      - Getting started: 365-command/getting-started.md
+      - Connecting tenants: 365-command/connecting-tenants.md
+      - Permissions: 365-command/permissions.md
+      - Reporting: 365-command/reporting.md
+      - Security: 365-command/security.md
+      - Management actions: 365-command/management-actions.md
+      - Intune: 365-command/intune.md
+      - MSP Global View: 365-command/global-view.md
+      - Troubleshooting: 365-command/troubleshooting.md
   - Support: support.md

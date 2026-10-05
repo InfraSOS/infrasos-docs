@@ -6,13 +6,19 @@ hide:
 # InfraSOS documentation
 
 **Monitor, audit and secure your identity infrastructure.** Documentation for the InfraSOS product
-family. **AD Command** is available now; the other two are in development, and have placeholder
-pages so the structure of this site is honest about what exists.
+family. **AD Command** and **365 Command** are available now; **AD Command Pro** is in
+development, with a placeholder page so the structure of this site stays honest about what exists.
 
 [![The AD Command dashboard](assets/screenshots/dashboard.png)](ad-command/index.md)
 
 /// caption
 The AD Command dashboard, running on a live domain controller.
+///
+
+[![The 365 Command overview](assets/screenshots/365-overview.png)](365-command/index.md)
+
+/// caption
+365 Command: Microsoft 365 and Entra ID reporting and management, at command.infrasos.com.
 ///
 
 ## Where do you want to start?
@@ -37,14 +43,14 @@ The AD Command dashboard, running on a live domain controller.
 
     [:octicons-arrow-right-24: What is planned](ad-command-pro.md)
 
--   :material-microsoft-office:{ .lg .middle } **365 Command** &nbsp; <span class="status soon">In development</span>
+-   :material-microsoft-office:{ .lg .middle } **365 Command** &nbsp; <span class="status available">Available</span>
 
     ---
 
     Microsoft 365 reporting and management. A separate product rather than a module of the others,
     because it authenticates to a different directory and shares no deployment model with them.
 
-    [:octicons-arrow-right-24: What is planned](365-command.md)
+    [:octicons-arrow-right-24: Read the documentation](365-command/index.md)
 
 -   :material-lifebuoy:{ .lg .middle } **Support**
 
