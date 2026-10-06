@@ -95,17 +95,17 @@ customer tenant - the permission alone returns `403` without it.
 | --- | --- | --- |
 | **User Administrator** | All baseline user actions (disable, enable, reset password, onboard, offboard) | The baseline. Assign it when you enable management. |
 | **Authentication Administrator** | Reset MFA | Use **Privileged** Authentication Administrator if the target account is itself an administrator |
-| **Privileged Role Administrator** | Assign a directory role | You can only assign roles at or below your own privilege |
+| **Privileged Role Administrator** | Assign or remove a directory role | You can only manage roles at or below your own privilege |
 
 Assign a role in the customer tenant: **Entra admin center → Roles and administrators →** the role
 **→ Add assignments →** search for the **InfraSOS Command - Management** application. Admin consent
 to the app does **not** assign these roles; it is a separate, deliberate step.
 
-!!! warning "The two privileged actions are a bigger ask"
-    Reset MFA and Assign role need the roles above, which are more privileged than the User
-    Administrator baseline. Treat them as advanced, opt-in actions: a customer can run every other
-    management action without granting them. When one is attempted without its role, the failure
-    names the exact role to assign.
+!!! warning "The privileged actions are a bigger ask"
+    Reset MFA, Assign role and Remove role need the roles above, which are more privileged than the
+    User Administrator baseline. Treat them as advanced, opt-in actions: a customer can run every
+    other management action without granting them. When one is attempted without its role, the
+    failure names the exact role to assign.
 
 ## Keeping permissions current
 

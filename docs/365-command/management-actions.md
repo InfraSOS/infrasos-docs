@@ -59,17 +59,22 @@ The offboarding wizard: each leaver step optional and confirmed.
 
 ## Role and MFA actions
 
-Two actions act on a user's privileges and need a directory role beyond the baseline:
+Three actions act on a user's privileges and need a directory role beyond the baseline:
 
 - **Reset MFA** removes a user's registered authentication methods so they must re-register. Needs
   `UserAuthenticationMethod.ReadWrite.All` and the **Authentication Administrator** role (Privileged
   Authentication Administrator if the account is itself an administrator).
-- **Assign directory role** grants a role to a user from a searchable picker. Needs
+- **Assign directory role** grants a role to a user from a searchable picker of every role. Needs
   `RoleManagement.ReadWrite.Directory` and the **Privileged Role Administrator** role.
+- **Remove directory role** removes a role the user currently holds - the picker lists only the roles
+  they have. Needs the same `RoleManagement.ReadWrite.Directory` permission and **Privileged Role
+  Administrator** role.
 
-These are deliberately advanced: a tenant can run every other action without granting them, and when
-one is attempted without its role the failure names exactly which role to assign. See
-[Permissions → Directory roles](permissions.md#directory-roles).
+All three are available on a user row, in the Users bulk menu, and on the Management console. In
+bulk, Assign and Remove ask for one role and apply it across the selection (users who do not hold the
+role on a Remove are reported as not changed). They are deliberately advanced: a tenant can run every
+other action without granting them, and when one is attempted without its role the failure names
+exactly which role to assign. See [Permissions → Directory roles](permissions.md#directory-roles).
 
 ## The audit trail
 
