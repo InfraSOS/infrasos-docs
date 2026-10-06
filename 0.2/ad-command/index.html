@@ -63,7 +63,16 @@
 
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1339,23 +1348,23 @@ instance usage.</p>
 is a small test forest, so the numbers are small and the security score is poor - which is what a
 domain that nobody has hardened yet actually looks like.</p>
 <h3 id="security-assessment">Security assessment<a class="headerlink" href="#security-assessment" title="Permanent link">&para;</a></h3>
-<p><img alt="The security page, listing failing controls worst first" src="../assets/screenshots/security.png" /></p>
+<p><a class="glightbox" href="../assets/screenshots/security.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The security page, listing failing controls worst first" src="../assets/screenshots/security.png" /></a></p>
 <p>Findings are listed worst first and lead with a count of things to fix rather than a percentage,
 because the count is what you act on. Each row expands to the evidence the product read, how to fix
 it, and any caution worth knowing first.</p>
 <h3 id="domain-health">Domain health<a class="headerlink" href="#domain-health" title="Permanent link">&para;</a></h3>
-<p><img alt="The domain health page" src="../assets/screenshots/domain-health.png" /></p>
+<p><a class="glightbox" href="../assets/screenshots/domain-health.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The domain health page" src="../assets/screenshots/domain-health.png" /></a></p>
 <h3 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h3>
-<p><img alt="The monitoring page, showing security events from this controller" src="../assets/screenshots/monitoring.png" /></p>
+<p><a class="glightbox" href="../assets/screenshots/monitoring.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The monitoring page, showing security events from this controller" src="../assets/screenshots/monitoring.png" /></a></p>
 <p>Events from <strong>this controller's</strong> Security log, each one explained rather than listed. Event logs do
 not replicate between domain controllers, so the page says whose log it is reading rather than
 implying the whole domain.</p>
 <h3 id="risky-users">Risky users<a class="headerlink" href="#risky-users" title="Permanent link">&para;</a></h3>
-<p><img alt="Consolidated account risk" src="../assets/screenshots/risky-users.png" /></p>
+<p><a class="glightbox" href="../assets/screenshots/risky-users.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Consolidated account risk" src="../assets/screenshots/risky-users.png" /></a></p>
 <h3 id="users-groups-and-reports">Users, groups and reports<a class="headerlink" href="#users-groups-and-reports" title="Permanent link">&para;</a></h3>
-<p><img alt="The users and groups page" src="../assets/screenshots/users-groups.png" /></p>
+<p><a class="glightbox" href="../assets/screenshots/users-groups.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The users and groups page" src="../assets/screenshots/users-groups.png" /></a></p>
 <h3 id="scheduled-reports">Scheduled reports<a class="headerlink" href="#scheduled-reports" title="Permanent link">&para;</a></h3>
-<p><img alt="Scheduled reports, delivered by email through your own relay" src="../assets/screenshots/scheduled-reports.png" /></p>
+<p><a class="glightbox" href="../assets/screenshots/scheduled-reports.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Scheduled reports, delivered by email through your own relay" src="../assets/screenshots/scheduled-reports.png" /></a></p>
 <p>Reports run unattended and arrive by email through your own SMTP relay. Recipients are restricted to
 domains an administrator has allowed, because the attachment contains directory data.</p>
 <h2 id="where-to-start">Where to start<a class="headerlink" href="#where-to-start" title="Permanent link">&para;</a></h2>
@@ -1438,5 +1447,7 @@ domains an administrator has allowed, because the attachment contains directory 
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -63,7 +63,16 @@
 
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1362,7 +1371,7 @@ tenants one at a time.</p>
 <li><strong>Recent changes</strong> across tenants.</li>
 </ul>
 <figure>
-<p><img alt="The MSP Global View across all connected tenants" src="../../assets/screenshots/365-global-view.png" /></p>
+<p><a class="glightbox" href="../../assets/screenshots/365-global-view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The MSP Global View across all connected tenants" src="../../assets/screenshots/365-global-view.png" /></a></p>
 <figcaption>
 <p>The Global View: priority actions and a sortable tenant table across the whole fleet.</p>
 </figcaption>
@@ -1494,5 +1503,7 @@ figure lands you where you can act on it.</p>
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

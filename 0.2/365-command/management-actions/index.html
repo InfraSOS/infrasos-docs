@@ -63,7 +63,16 @@
 
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1418,7 +1427,7 @@ the permissions and directory roles it needs are in <a href="../permissions/">Pe
   selection, with a per-row result so you know exactly what happened to each.</li>
 </ul>
 <figure>
-<p><img alt="The Management console: KPIs, needs-attention and bulk operations" src="../../assets/screenshots/365-management-console.png" /></p>
+<p><a class="glightbox" href="../../assets/screenshots/365-management-console.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Management console: KPIs, needs-attention and bulk operations" src="../../assets/screenshots/365-management-console.png" /></a></p>
 <figcaption>
 <p>The Management console: headline KPIs, a needs-attention list, quick actions and bulk operations.</p>
 </figcaption>
@@ -1439,7 +1448,7 @@ reports, remove inbox rules, revoke app consents, disable devices, and reclaim l
 steps that depend on Exchange Online (convert to shared, delegate access, set an out-of-office, hide
 from the address list) are rolling out as the Exchange integration lands.</p>
 <figure>
-<p><img alt="The offboarding wizard running the leaver checklist" src="../../assets/screenshots/365-offboard.png" /></p>
+<p><a class="glightbox" href="../../assets/screenshots/365-offboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The offboarding wizard running the leaver checklist" src="../../assets/screenshots/365-offboard.png" /></a></p>
 <figcaption>
 <p>The offboarding wizard: each leaver step optional and confirmed.</p>
 </figcaption>
@@ -1538,5 +1547,7 @@ team should never mean losing track of who did what, the trail is immutable.</p>
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
