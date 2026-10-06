@@ -53,6 +53,16 @@ theme:
 extra_css:
   - assets/infrasos.css
 
+plugins:
+  # Adding a plugins block disables the default search plugin, so re-list it.
+  - search
+  # Click any content image to open it full-size in a lightbox.
+  - glightbox:
+      touchNavigation: true
+      zoomable: true
+      draggable: true
+      effect: zoom
+
 markdown_extensions:
   - admonition
   - attr_list
