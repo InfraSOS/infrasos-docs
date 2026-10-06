@@ -1445,17 +1445,22 @@ from the address list) are rolling out as the Exchange integration lands.</p>
 </figcaption>
 </figure>
 <h2 id="role-and-mfa-actions">Role and MFA actions<a class="headerlink" href="#role-and-mfa-actions" title="Permanent link">&para;</a></h2>
-<p>Two actions act on a user's privileges and need a directory role beyond the baseline:</p>
+<p>Three actions act on a user's privileges and need a directory role beyond the baseline:</p>
 <ul>
 <li><strong>Reset MFA</strong> removes a user's registered authentication methods so they must re-register. Needs
   <code>UserAuthenticationMethod.ReadWrite.All</code> and the <strong>Authentication Administrator</strong> role (Privileged
   Authentication Administrator if the account is itself an administrator).</li>
-<li><strong>Assign directory role</strong> grants a role to a user from a searchable picker. Needs
+<li><strong>Assign directory role</strong> grants a role to a user from a searchable picker of every role. Needs
   <code>RoleManagement.ReadWrite.Directory</code> and the <strong>Privileged Role Administrator</strong> role.</li>
+<li><strong>Remove directory role</strong> removes a role the user currently holds - the picker lists only the roles
+  they have. Needs the same <code>RoleManagement.ReadWrite.Directory</code> permission and <strong>Privileged Role
+  Administrator</strong> role.</li>
 </ul>
-<p>These are deliberately advanced: a tenant can run every other action without granting them, and when
-one is attempted without its role the failure names exactly which role to assign. See
-<a href="../permissions/#directory-roles">Permissions → Directory roles</a>.</p>
+<p>All three are available on a user row, in the Users bulk menu, and on the Management console. In
+bulk, Assign and Remove ask for one role and apply it across the selection (users who do not hold the
+role on a Remove are reported as not changed). They are deliberately advanced: a tenant can run every
+other action without granting them, and when one is attempted without its role the failure names
+exactly which role to assign. See <a href="../permissions/#directory-roles">Permissions → Directory roles</a>.</p>
 <h2 id="the-audit-trail">The audit trail<a class="headerlink" href="#the-audit-trail" title="Permanent link">&para;</a></h2>
 <p>The <strong>Audit</strong> view lists every management action taken through 365 Command for a tenant, newest
 first, with the operator, the action, the target and whether it succeeded. Because delegation to a

@@ -1580,8 +1580,8 @@ customer tenant - the permission alone returns <code>403</code> without it.</p>
 </tr>
 <tr>
 <td><strong>Privileged Role Administrator</strong></td>
-<td>Assign a directory role</td>
-<td>You can only assign roles at or below your own privilege</td>
+<td>Assign or remove a directory role</td>
+<td>You can only manage roles at or below your own privilege</td>
 </tr>
 </tbody>
 </table>
@@ -1589,11 +1589,11 @@ customer tenant - the permission alone returns <code>403</code> without it.</p>
 <strong>→ Add assignments →</strong> search for the <strong>InfraSOS Command - Management</strong> application. Admin consent
 to the app does <strong>not</strong> assign these roles; it is a separate, deliberate step.</p>
 <div class="admonition warning">
-<p class="admonition-title">The two privileged actions are a bigger ask</p>
-<p>Reset MFA and Assign role need the roles above, which are more privileged than the User
-Administrator baseline. Treat them as advanced, opt-in actions: a customer can run every other
-management action without granting them. When one is attempted without its role, the failure
-names the exact role to assign.</p>
+<p class="admonition-title">The privileged actions are a bigger ask</p>
+<p>Reset MFA, Assign role and Remove role need the roles above, which are more privileged than the
+User Administrator baseline. Treat them as advanced, opt-in actions: a customer can run every
+other management action without granting them. When one is attempted without its role, the
+failure names the exact role to assign.</p>
 </div>
 <h2 id="keeping-permissions-current">Keeping permissions current<a class="headerlink" href="#keeping-permissions-current" title="Permanent link">&para;</a></h2>
 <p>When 365 Command adds a capability that needs a new permission, connected tenants are flagged with
