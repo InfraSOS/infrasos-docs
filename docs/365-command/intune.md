@@ -7,7 +7,10 @@ which ones need attention now.
 ## What it shows
 
 - **Managed devices.** One inventory across Windows, macOS, iOS and Android, with ownership,
-  enrollment type, last check-in, and compliance and encryption state per device.
+  enrollment type, last check-in, and compliance and encryption state per device. Click any device
+  for its full detail - identity, hardware (model, serial, storage), OS, compliance and security
+  (grace period, encryption, jailbreak, threat state) and management (agent, Entra registration,
+  enrolment and last check-in).
 - **Compliance.** The compliant, in-grace and non-compliant split, with a breakdown of what is
   driving it.
 - **At risk.** The endpoints to act on first - non-compliant, gone quiet, unencrypted, or jailbroken
