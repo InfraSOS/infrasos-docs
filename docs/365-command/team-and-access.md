@@ -30,7 +30,11 @@ customer-facing engineer should only touch part of the fleet.
 
 ## Inviting a colleague
 
-<!-- screenshot: 365-members.png - the Members page: invited colleagues with their roles and tenant scope -->
+![The Members page](../assets/screenshots/365-members.png)
+/// caption
+The Members page: invite a colleague with a role and tenant scope; the list shows each member's role,
+access, status and controls.
+///
 
 On **Members** (Admins only), invite by email, choose the role and, where it applies, the tenants in
 scope. The person receives a branded email invitation and, once they accept and sign in, appears in

@@ -5,7 +5,11 @@ review or a monthly stale-account sweep lands in an inbox without anyone opening
 **Scheduled Reports** in the navigation lists what is scheduled, when each next runs, and whether the
 last one was sent.
 
-<!-- screenshot: 365-scheduled-reports.png - the Scheduled Reports page listing a couple of schedules with next-run and last-result -->
+![The Scheduled Reports page](../assets/screenshots/365-scheduled-reports.png)
+/// caption
+Scheduled Reports: the new-schedule form, and the list showing each schedule's next run, last run
+and controls.
+///
 
 ## Creating a schedule
 
