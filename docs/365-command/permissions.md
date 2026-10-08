@@ -5,7 +5,8 @@ reading (reporting), and writing (management) each request only what that job ne
 ever shown more access than they are actually turning on.
 
 The consent screen Microsoft shows you is always the authoritative list for a given tenant. This
-page explains what each permission is for.
+page explains what each permission is for. For how the service is hosted and what it stores, see
+[Security and data handling](security-and-data.md).
 
 ## Sign-in application
 

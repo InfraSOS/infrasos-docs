@@ -71,6 +71,9 @@ New to the product: [Getting started](getting-started.md), then
 [Connecting tenants](connecting-tenants.md), [Permissions](permissions.md) and
 [Team and delegated access](team-and-access.md).
 
+Evaluating the service: [Security and data handling](security-and-data.md) covers how 365 Command is
+hosted and secured, and exactly what it stores.
+
 Already connected: [Reporting](reporting.md), [Security](security.md),
 [Management actions](management-actions.md), [Intune](intune.md),
 [Scheduled reports](scheduled-reports.md), [Alerts](alerts.md) and
