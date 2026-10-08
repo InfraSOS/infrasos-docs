@@ -8,7 +8,11 @@ Graph data, and a matching condition raises an alert and emails its recipients.
 Alerts sit under **Global View** in the navigation, and open on three tabs: **Global Alert View**,
 **Active Alerts** and **Alert Profiles**.
 
-<!-- screenshot: 365-alerts.png - the Alerts page on the Active Alerts tab, with the status filter and a few rows -->
+![The Alerts page on the Active Alerts tab](../assets/screenshots/365-alerts.png)
+/// caption
+Active Alerts for one tenant: the 24-hour counts, the 7-day timeline, and the table with severity,
+who has acknowledged each alert, and its status.
+///
 
 ## What you can alert on
 
@@ -88,6 +92,12 @@ beside each.
 Once you run more than one tenant, the **Global Alert View** is the cross-tenant picture: the alerts
 raised in the last 24 hours by severity with the change against the previous 24 hours, the tenants
 with the most new alerts, and a per-tenant table.
+
+![The Global Alert View across all connected tenants](../assets/screenshots/365-global-alerts.png)
+/// caption
+The Global Alert View: the last 24 hours across every tenant, the busiest tenants, and a per-tenant
+table with its trend and a 7-day sparkline.
+///
 
 Each tenant row shows its active alerts by severity, whether its profiles are on, a 7-day sparkline,
 and a **trend** - Rising, Improving or Stable. The trend is a rank correlation of the daily counts
