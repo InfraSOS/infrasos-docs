@@ -1605,8 +1605,13 @@ slipping below a line - and who to tell. Every profile is checked <strong>hourly
 Graph data, and a matching condition raises an alert and emails its recipients.</p>
 <p>Alerts sit under <strong>Global View</strong> in the navigation, and open on three tabs: <strong>Global Alert View</strong>,
 <strong>Active Alerts</strong> and <strong>Alert Profiles</strong>.</p>
-<!-- screenshot: 365-alerts.png - the Alerts page on the Active Alerts tab, with the status filter and a few rows -->
-
+<figure>
+<p><a class="glightbox" href="../../assets/screenshots/365-alerts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Alerts page on the Active Alerts tab" src="../../assets/screenshots/365-alerts.png" /></a></p>
+<figcaption>
+<p>Active Alerts for one tenant: the 24-hour counts, the 7-day timeline, and the table with severity,
+who has acknowledged each alert, and its status.</p>
+</figcaption>
+</figure>
 <h2 id="what-you-can-alert-on">What you can alert on<a class="headerlink" href="#what-you-can-alert-on" title="Permanent link">&para;</a></h2>
 <p>Profiles come in two kinds. <strong>Change</strong> alerts compare the tenant now against a stored baseline and
 fire only on genuinely new items. <strong>Threshold</strong> alerts fire when a number crosses a line you set.</p>
@@ -1732,6 +1737,13 @@ beside each.</p>
 <p>Once you run more than one tenant, the <strong>Global Alert View</strong> is the cross-tenant picture: the alerts
 raised in the last 24 hours by severity with the change against the previous 24 hours, the tenants
 with the most new alerts, and a per-tenant table.</p>
+<figure>
+<p><a class="glightbox" href="../../assets/screenshots/365-global-alerts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Global Alert View across all connected tenants" src="../../assets/screenshots/365-global-alerts.png" /></a></p>
+<figcaption>
+<p>The Global Alert View: the last 24 hours across every tenant, the busiest tenants, and a per-tenant
+table with its trend and a 7-day sparkline.</p>
+</figcaption>
+</figure>
 <p>Each tenant row shows its active alerts by severity, whether its profiles are on, a 7-day sparkline,
 and a <strong>trend</strong> - Rising, Improving or Stable. The trend is a rank correlation of the daily counts
 rather than a raw day-on-day difference, so a single noisy day does not flip it; a run that is
