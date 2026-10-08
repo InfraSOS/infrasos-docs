@@ -813,6 +813,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -961,6 +969,62 @@
   
   
     <li class="md-nav__item">
+      <a href="team-and-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team and access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="security-and-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security and data handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="reporting/" class="md-nav__link">
         
   
@@ -1053,6 +1117,62 @@
     
   
     Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scheduled-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduled reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alerts
   
 
     
@@ -1271,9 +1391,16 @@ no customer is shown a write-access consent screen they did not ask for. See
   group membership, onboard a starter and offboard a leaver through guided wizards, and run the same
   actions in bulk. Every change confirms first and is written to an audit trail. See
   <a href="management-actions/">Management actions</a>.</li>
+<li><strong>Scheduled reports.</strong> Have any core report arrive by email as an Excel attachment on a daily,
+  weekly or monthly cadence. See <a href="scheduled-reports/">Scheduled reports</a>.</li>
+<li><strong>Alerts.</strong> Be emailed when something changes - a new administrator or guest, a risky user, or MFA
+  coverage, Secure Score or licence seats crossing a threshold - with acknowledge, resolve and a
+  cross-tenant dashboard. See <a href="alerts/">Alerts</a>.</li>
 <li><strong>MSP Global View.</strong> One command centre across every connected tenant: priority actions, a
   sortable tenant table, fleet trends and cross-tenant recent changes. See
   <a href="global-view/">MSP Global View</a>.</li>
+<li><strong>A team, with roles.</strong> Invite colleagues with an Admin, Operator or Viewer role and optional
+  per-tenant scope, rather than sharing one login. See <a href="team-and-access/">Team and delegated access</a>.</li>
 </ul>
 <h2 id="what-it-deliberately-does-not-do">What it deliberately does not do<a class="headerlink" href="#what-it-deliberately-does-not-do" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1292,14 +1419,22 @@ no customer is shown a write-access consent screen they did not ask for. See
 <h2 id="how-it-is-hosted">How it is hosted<a class="headerlink" href="#how-it-is-hosted" title="Permanent link">&para;</a></h2>
 <p>365 Command is hosted by InfraSOS. You subscribe once (through the Microsoft commercial marketplace
 or directly, with a 30-day trial), then connect one or more customer tenants by admin consent.
-Reports are read live from Graph and cached briefly in memory to keep the console responsive; the
-only things kept are the list of connected tenants, your subscription, and the management action
-audit trail.</p>
+Reports are read live from Graph and cached briefly in memory to keep the console responsive. What
+is kept is the configuration the console needs to run - your subscription, the tenants you have
+connected, the colleagues you have invited and their roles, the alert and report schedules you set
+up, and the audit trail. It keeps <strong>no tenant credentials or access tokens</strong> (sign-in happens on
+demand) and <strong>no bulk copy of directory data</strong> - a report is read when you open it, not warehoused.
+The one place directory identifiers are retained is an alert's own detail (the item it fired on),
+kept for 60 days. See <a href="permissions/">Permissions</a> for what the product reads.</p>
 <h2 id="where-to-start">Where to start<a class="headerlink" href="#where-to-start" title="Permanent link">&para;</a></h2>
 <p>New to the product: <a href="getting-started/">Getting started</a>, then
-<a href="connecting-tenants/">Connecting tenants</a> and <a href="permissions/">Permissions</a>.</p>
+<a href="connecting-tenants/">Connecting tenants</a>, <a href="permissions/">Permissions</a> and
+<a href="team-and-access/">Team and delegated access</a>.</p>
+<p>Evaluating the service: <a href="security-and-data/">Security and data handling</a> covers how 365 Command is
+hosted and secured, and exactly what it stores.</p>
 <p>Already connected: <a href="reporting/">Reporting</a>, <a href="security/">Security</a>,
-<a href="management-actions/">Management actions</a>, <a href="intune/">Intune</a> and
+<a href="management-actions/">Management actions</a>, <a href="intune/">Intune</a>,
+<a href="scheduled-reports/">Scheduled reports</a>, <a href="alerts/">Alerts</a> and
 <a href="global-view/">MSP Global View</a>.</p>
 <p>Something is not working: <a href="troubleshooting/">Troubleshooting</a>.</p>
 

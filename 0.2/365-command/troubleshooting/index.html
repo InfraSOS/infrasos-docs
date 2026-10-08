@@ -813,6 +813,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -961,6 +969,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../team-and-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team and access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-and-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security and data handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../reporting/" class="md-nav__link">
         
   
@@ -1053,6 +1117,62 @@
     
   
     Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduled-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduled reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alerts
   
 
     
@@ -1227,6 +1347,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#alerts-or-scheduled-reports-are-not-arriving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerts or scheduled reports are not arriving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#still-stuck" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1373,6 +1504,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#alerts-or-scheduled-reports-are-not-arriving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerts or scheduled reports are not arriving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#still-stuck" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1444,6 +1586,19 @@ licensed for Intune</strong>. The page names which. See <a href="../intune/">Int
 <p>365 Command has gained a capability that needs a new permission. Choose <strong>Refresh permissions</strong>
 (reporting) or <strong>Refresh access</strong> (management) on that tenant to re-run consent and pick up the new
 scopes. Nothing you already had stops working while the refresh is pending.</p>
+<h2 id="alerts-or-scheduled-reports-are-not-arriving">Alerts or scheduled reports are not arriving<a class="headerlink" href="#alerts-or-scheduled-reports-are-not-arriving" title="Permanent link">&para;</a></h2>
+<p>The send itself rarely fails; the usual cause is Microsoft 365 mail filtering deferring or junking
+mail from a sender it has not seen before.</p>
+<ul>
+<li><strong>Allow-list <code>mail.infrasos.com</code></strong> in your mail filtering. New-domain mail is often held back on
+  the first bursts and then flows normally.</li>
+<li>Check the recipient addresses on the <a href="../alerts/">profile</a> or <a href="../scheduled-reports/">schedule</a>.</li>
+<li>For a schedule, use <strong>Run now</strong>; for an alert profile, use <strong>Test</strong>. Both send immediately through
+  the real path, so a successful one points the finger at filtering rather than configuration.</li>
+<li>An alert dashboard that is empty is usually correct: a profile raises nothing until its condition
+  is met (a threshold is crossed on the next hourly check, or a genuinely new item appears), and the
+  first check of a change profile only captures its baseline.</li>
+</ul>
 <h2 id="still-stuck">Still stuck<a class="headerlink" href="#still-stuck" title="Permanent link">&para;</a></h2>
 <p><a href="../../support/">Support</a> has how to reach us. Including the tenant, the action, and the exact
 message the console showed gets you an answer fastest.</p>
