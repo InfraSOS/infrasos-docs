@@ -7,6 +7,19 @@ paths, so each image appears as soon as the file is added - no further edits nee
 
 (This file lives at the repo root, outside `docs/`, so it is not published to the site.)
 
+The first eight pages already contain the `![...](...)` reference, so dropping the file in is all it
+takes. The three newest pages (Alerts, Scheduled reports, Team and access) instead carry a
+`<!-- screenshot: <name> -->` marker where the image goes - a real reference to a missing file would
+fail the strict build - so for those, replace the marker with the image reference when you add the
+file, for example:
+
+```markdown
+![The Alerts page](../assets/screenshots/365-alerts.png)
+/// caption
+The Alerts page on Active Alerts: status filter, severity and the Actions menu.
+///
+```
+
 | Filename (into `docs/assets/screenshots/`) | Used on | What to capture |
 | --- | --- | --- |
 | `365-overview.png` | 365 Command home + site home | The Overview for a connected tenant: headline KPIs and the needs-attention list. |
@@ -17,6 +30,9 @@ paths, so each image appears as soon as the file is added - no further edits nee
 | `365-offboard.png` | Management actions | The offboarding wizard mid-flow, showing the leaver checklist. |
 | `365-intune.png` | Intune | The Intune page: managed devices and compliance (needs an Intune-licensed tenant). |
 | `365-global-view.png` | MSP Global View + site home | The Global View: priority actions and the sortable tenant table across the fleet. |
+| `365-alerts.png` | Alerts | The Alerts page on the Active Alerts tab: the status filter, a few rows with severity and status, and the Actions menu. |
+| `365-scheduled-reports.png` | Scheduled reports | The Scheduled Reports list: a schedule or two with next-run time and last result. |
+| `365-members.png` | Team and delegated access | The Members page: invited colleagues with their roles and tenant scope. |
 
 ## Tips
 

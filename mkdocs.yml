@@ -118,10 +118,14 @@ nav:
       - Getting started: 365-command/getting-started.md
       - Connecting tenants: 365-command/connecting-tenants.md
       - Permissions: 365-command/permissions.md
+      - Team and access: 365-command/team-and-access.md
+      - Security and data handling: 365-command/security-and-data.md
       - Reporting: 365-command/reporting.md
       - Security: 365-command/security.md
       - Management actions: 365-command/management-actions.md
       - Intune: 365-command/intune.md
+      - Scheduled reports: 365-command/scheduled-reports.md
+      - Alerts: 365-command/alerts.md
       - MSP Global View: 365-command/global-view.md
       - Troubleshooting: 365-command/troubleshooting.md
   - Support: support.md
