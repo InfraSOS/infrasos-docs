@@ -56,6 +56,20 @@ licensed for Intune**. The page names which. See [Intune](intune.md).
 (reporting) or **Refresh access** (management) on that tenant to re-run consent and pick up the new
 scopes. Nothing you already had stops working while the refresh is pending.
 
+## Alerts or scheduled reports are not arriving
+
+The send itself rarely fails; the usual cause is Microsoft 365 mail filtering deferring or junking
+mail from a sender it has not seen before.
+
+- **Allow-list `mail.infrasos.com`** in your mail filtering. New-domain mail is often held back on
+  the first bursts and then flows normally.
+- Check the recipient addresses on the [profile](alerts.md) or [schedule](scheduled-reports.md).
+- For a schedule, use **Run now**; for an alert profile, use **Test**. Both send immediately through
+  the real path, so a successful one points the finger at filtering rather than configuration.
+- An alert dashboard that is empty is usually correct: a profile raises nothing until its condition
+  is met (a threshold is crossed on the next hourly check, or a genuinely new item appears), and the
+  first check of a change profile only captures its baseline.
+
 ## Still stuck
 
 [Support](../support.md) has how to reach us. Including the tenant, the action, and the exact

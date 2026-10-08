@@ -52,3 +52,9 @@ history and fill out over the following month.
 A priority action, or any tenant row, opens into that tenant: the Global View hands you off to the
 exact report that explains the number, in the tenant it belongs to, so investigating a fleet-level
 figure lands you where you can act on it.
+
+## Related: cross-tenant alerts
+
+The Global View is the posture of the fleet now. For **what has changed** across the fleet - new
+administrators, risky users, thresholds crossed - and to be emailed when it does, see
+[Alerts](alerts.md), whose own Global Alert View summarises the last 24 hours across every tenant.

@@ -28,9 +28,16 @@ The overview: a connected tenant's headline counts and what most needs attention
   group membership, onboard a starter and offboard a leaver through guided wizards, and run the same
   actions in bulk. Every change confirms first and is written to an audit trail. See
   [Management actions](management-actions.md).
+- **Scheduled reports.** Have any core report arrive by email as an Excel attachment on a daily,
+  weekly or monthly cadence. See [Scheduled reports](scheduled-reports.md).
+- **Alerts.** Be emailed when something changes - a new administrator or guest, a risky user, or MFA
+  coverage, Secure Score or licence seats crossing a threshold - with acknowledge, resolve and a
+  cross-tenant dashboard. See [Alerts](alerts.md).
 - **MSP Global View.** One command centre across every connected tenant: priority actions, a
   sortable tenant table, fleet trends and cross-tenant recent changes. See
   [MSP Global View](global-view.md).
+- **A team, with roles.** Invite colleagues with an Admin, Operator or Viewer role and optional
+  per-tenant scope, rather than sharing one login. See [Team and delegated access](team-and-access.md).
 
 ## What it deliberately does not do
 
@@ -50,17 +57,23 @@ The overview: a connected tenant's headline counts and what most needs attention
 
 365 Command is hosted by InfraSOS. You subscribe once (through the Microsoft commercial marketplace
 or directly, with a 30-day trial), then connect one or more customer tenants by admin consent.
-Reports are read live from Graph and cached briefly in memory to keep the console responsive; the
-only things kept are the list of connected tenants, your subscription, and the management action
-audit trail.
+Reports are read live from Graph and cached briefly in memory to keep the console responsive. What
+is kept is the configuration the console needs to run - your subscription, the tenants you have
+connected, the colleagues you have invited and their roles, the alert and report schedules you set
+up, and the audit trail. It keeps **no tenant credentials or access tokens** (sign-in happens on
+demand) and **no bulk copy of directory data** - a report is read when you open it, not warehoused.
+The one place directory identifiers are retained is an alert's own detail (the item it fired on),
+kept for 60 days. See [Permissions](permissions.md) for what the product reads.
 
 ## Where to start
 
 New to the product: [Getting started](getting-started.md), then
-[Connecting tenants](connecting-tenants.md) and [Permissions](permissions.md).
+[Connecting tenants](connecting-tenants.md), [Permissions](permissions.md) and
+[Team and delegated access](team-and-access.md).
 
 Already connected: [Reporting](reporting.md), [Security](security.md),
-[Management actions](management-actions.md), [Intune](intune.md) and
+[Management actions](management-actions.md), [Intune](intune.md),
+[Scheduled reports](scheduled-reports.md), [Alerts](alerts.md) and
 [MSP Global View](global-view.md).
 
 Something is not working: [Troubleshooting](troubleshooting.md).
