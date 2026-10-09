@@ -45,6 +45,8 @@ another.
 On **Alert Profiles**, choose the alert, the tenant, a severity, the threshold where the alert needs
 one, and the recipients.
 
+![The Alert Profiles tab with configured alert rules across tenants](../assets/screenshots/365-alert-profiles.png)
+
 - **Recipients** are any email addresses, comma-separated - a shared SOC inbox, a ticketing address,
   a specific engineer. They do not have to be console users.
 - **Test** sends a sample to the recipients using the tenant's current state, without touching the
