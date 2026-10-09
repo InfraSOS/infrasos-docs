@@ -30,8 +30,11 @@ Enterprise" link in the plan picker to get in touch.
 
 !!! note "The user cap is a soft limit"
     The user count is the total across every tenant you have connected, with no
-    per-tenant fee. If you go over your plan's cap, reporting you already rely on
-    keeps working, you are simply asked to upgrade before connecting another tenant.
+    per-tenant fee. On paid plans, if you go over your cap, reporting you already
+    rely on keeps working, you are simply asked to upgrade before connecting another
+    tenant. On the **Free** plan, each report shows the first 25 rows with a prompt
+    to upgrade and see (and export) the rest; the summary totals still reflect your
+    whole tenant.
 
 ## Changing your plan
 
@@ -53,6 +56,14 @@ The Free plan is not a Microsoft subscription, so moving to Basic, Standard or P
 starts a one-time purchase on the Microsoft Marketplace. The portal takes you there,
 and once the purchase completes you are dropped straight back into your workspace on
 the new plan.
+
+### Free trial
+
+New customers can start a **free trial** of the full platform, including the MSP
+Global View, from the plan picker or the marketplace listing. The trial runs for one
+month, then converts to the paid plan unless you change it first. A couple of days
+before it ends, the portal shows a reminder banner and emails the account, so nobody
+is billed by surprise: switch to the plan that fits, or keep going on the current one.
 
 ## Where billing and invoices live
 
