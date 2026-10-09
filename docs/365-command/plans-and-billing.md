@@ -13,15 +13,16 @@ You can change plan yourself from inside the portal at any time.
 
 | | Free | Basic | Standard | Pro |
 |---|:---:|:---:|:---:|:---:|
-| Users (total, across all connected tenants) | 25 | 500 | 1,500 | 5,000 |
+| Users (total, across unlimited connected tenants) | 25 | 500 | 1,500 | 5,000 |
 | Reports and dashboards | ✓ | ✓ | ✓ | ✓ |
 | Export (CSV / Excel / PDF) | | ✓ | ✓ | ✓ |
+| Invite your team | | | ✓ | ✓ |
 | Management actions | | | ✓ | ✓ |
 | Alerts | | | ✓ | ✓ |
 | Scheduled reports | | | ✓ | ✓ |
 | MSP Global View | | | | ✓ |
 | Connected tenants | 1 | Unlimited | Unlimited | Unlimited |
-| Portal users (your delegated team) | 1 | Unlimited | Unlimited | Unlimited |
+| Portal users (your delegated team) | 1 | 1 | Unlimited | Unlimited |
 
 Need more than 5,000 users, or a tailored agreement? The **Enterprise** plan removes
 the user cap and includes everything, as a private offer. Use the "Contact us about
