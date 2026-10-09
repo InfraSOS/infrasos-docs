@@ -2,110 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.infrasos.com/0.2/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command-pro/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/support/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/alerts/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/connecting-tenants/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/getting-started/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/global-view/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/intune/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/management-actions/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/permissions/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.infrasos.com/0.2/365-command/plans-and-billing/</loc>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/reporting/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/scheduled-reports/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/security-and-data/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/security/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/team-and-access/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/365-command/troubleshooting/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/architecture/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/deploying-a-domain-controller/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/getting-started/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/operations/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/scheduled-reports/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/scoring/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/security-assessment/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/troubleshooting/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.infrasos.com/0.2/ad-command/users-and-groups/</loc>
-         <lastmod>2026-10-08</lastmod>
+         <lastmod>2026-10-09</lastmod>
     </url>
 </urlset>
