@@ -2,8 +2,10 @@
 
 Alerts turn the posture 365 Command already measures into **email you receive when something
 changes**, per connected tenant. A profile describes a condition - a new administrator, MFA coverage
-slipping below a line - and who to tell. Every profile is checked **hourly** against live Microsoft
-Graph data, and a matching condition raises an alert and emails its recipients.
+slipping below a line - and who to tell. Each profile is checked on a schedule against live Microsoft
+Graph data, the most time-sensitive conditions most often (see
+[How often each profile is checked](#how-often-each-profile-is-checked)), and a matching condition
+raises an alert and emails its recipients.
 
 Alerts sit under **Global View** in the navigation, and open on three tabs: **Global Alert View**,
 **Active Alerts** and **Alert Profiles**.
@@ -32,6 +34,30 @@ fire only on genuinely new items. **Threshold** alerts fire when a number crosse
     The first check of a change profile captures a **baseline** of what already exists and raises
     nothing - it is not going to email you every current administrator the day you switch it on.
     From then on, only items that appear after that baseline raise an alert.
+
+### How often each profile is checked
+
+Conditions do not all carry the same urgency, so each profile type runs on its own cadence rather
+than one shared timer. The most security-sensitive changes are checked several times an hour; slower
+moving thresholds are checked hourly.
+
+| Profile | Checked every |
+| --- | --- |
+| **New administrator** | 15 minutes |
+| **New guest** | 30 minutes |
+| **New risky user** | 30 minutes |
+| **MFA coverage** | Hourly |
+| **Secure Score** | Hourly |
+| **Licence seats** | Hourly |
+
+So a newly added administrator is normally detected within about 15 minutes, and emailed to the
+profile's recipients with **who made the change** where the directory audit log records it.
+
+!!! note "Detection follows what Graph can see"
+    A profile reports what Microsoft Graph reports. A directory role granted as **eligible** in
+    Privileged Identity Management is not an active assignment, so a New administrator alert picks it
+    up once the role is **activated**, not while it is only eligible. Active (permanent or activated)
+    assignments are detected on the next check.
 
 ## Severity
 
