@@ -1263,6 +1263,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="What you can alert on">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-often-each-profile-is-checked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How often each profile is checked
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1504,6 +1521,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="What you can alert on">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-often-each-profile-is-checked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How often each profile is checked
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1631,8 +1665,10 @@
 <h1 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">&para;</a></h1>
 <p>Alerts turn the posture 365 Command already measures into <strong>email you receive when something
 changes</strong>, per connected tenant. A profile describes a condition - a new administrator, MFA coverage
-slipping below a line - and who to tell. Every profile is checked <strong>hourly</strong> against live Microsoft
-Graph data, and a matching condition raises an alert and emails its recipients.</p>
+slipping below a line - and who to tell. Each profile is checked on a schedule against live Microsoft
+Graph data, the most time-sensitive conditions most often (see
+<a href="#how-often-each-profile-is-checked">How often each profile is checked</a>), and a matching condition
+raises an alert and emails its recipients.</p>
 <p>Alerts sit under <strong>Global View</strong> in the navigation, and open on three tabs: <strong>Global Alert View</strong>,
 <strong>Active Alerts</strong> and <strong>Alert Profiles</strong>.</p>
 <figure>
@@ -1698,6 +1734,53 @@ fire only on genuinely new items. <strong>Threshold</strong> alerts fire when a 
 <p>The first check of a change profile captures a <strong>baseline</strong> of what already exists and raises
 nothing - it is not going to email you every current administrator the day you switch it on.
 From then on, only items that appear after that baseline raise an alert.</p>
+</div>
+<h3 id="how-often-each-profile-is-checked">How often each profile is checked<a class="headerlink" href="#how-often-each-profile-is-checked" title="Permanent link">&para;</a></h3>
+<p>Conditions do not all carry the same urgency, so each profile type runs on its own cadence rather
+than one shared timer. The most security-sensitive changes are checked several times an hour; slower
+moving thresholds are checked hourly.</p>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Checked every</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>New administrator</strong></td>
+<td>15 minutes</td>
+</tr>
+<tr>
+<td><strong>New guest</strong></td>
+<td>30 minutes</td>
+</tr>
+<tr>
+<td><strong>New risky user</strong></td>
+<td>30 minutes</td>
+</tr>
+<tr>
+<td><strong>MFA coverage</strong></td>
+<td>Hourly</td>
+</tr>
+<tr>
+<td><strong>Secure Score</strong></td>
+<td>Hourly</td>
+</tr>
+<tr>
+<td><strong>Licence seats</strong></td>
+<td>Hourly</td>
+</tr>
+</tbody>
+</table>
+<p>So a newly added administrator is normally detected within about 15 minutes, and emailed to the
+profile's recipients with <strong>who made the change</strong> where the directory audit log records it.</p>
+<div class="admonition note">
+<p class="admonition-title">Detection follows what Graph can see</p>
+<p>A profile reports what Microsoft Graph reports. A directory role granted as <strong>eligible</strong> in
+Privileged Identity Management is not an active assignment, so a New administrator alert picks it
+up once the role is <strong>activated</strong>, not while it is only eligible. Active (permanent or activated)
+assignments are detected on the next check.</p>
 </div>
 <h2 id="severity">Severity<a class="headerlink" href="#severity" title="Permanent link">&para;</a></h2>
 <p>Every alert carries a severity - <strong>Critical</strong>, <strong>Attention</strong> or <strong>Review</strong> - which sets the colour it
