@@ -113,6 +113,7 @@ nav:
       - Operations: ad-command/operations.md
       - Troubleshooting: ad-command/troubleshooting.md
   - AD Command Pro: ad-command-pro.md
+  - AD Self-Service Portal: ad-self-service-portal/index.md
   - 365 Command:
       - 365-command/index.md
       - Getting started: 365-command/getting-started.md
