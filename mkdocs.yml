@@ -10,9 +10,6 @@ site_description: Documentation for InfraSOS AD Command - Active Directory deplo
 site_author: InfraSOS FZCO
 copyright: Copyright &copy; 2026 InfraSOS FZCO
 
-repo_url: https://github.com/InfraSOS/infrasos-docs
-edit_uri: ""
-
 theme:
   name: material
   language: en
@@ -85,12 +82,6 @@ markdown_extensions:
       alternate_style: true
 
 extra:
-  # The version selector in the header. Reads versions.json, which mike writes to the gh-pages
-  # branch; without this the site publishes fine and simply never offers the other versions.
-  version:
-    provider: mike
-    default: latest
-
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/InfraSOS

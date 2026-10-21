@@ -6,14 +6,8 @@ hide:
 # InfraSOS documentation
 
 **Monitor, audit and secure your identity infrastructure.** Documentation for the InfraSOS product
-family. **AD Command** and **365 Command** are available now; **AD Command Pro** is in
-development, with a placeholder page so the structure of this site stays honest about what exists.
-
-[![The AD Command dashboard](assets/screenshots/dashboard.png)](ad-command/index.md)
-
-/// caption
-The AD Command dashboard, running on a live domain controller.
-///
+family. **365 Command** is available now; **AD Command** and **AD Command Pro** are in
+development, with placeholder pages so the structure of this site stays honest about what exists.
 
 [![The 365 Command overview](assets/screenshots/365-overview.png)](365-command/index.md)
 
@@ -25,7 +19,7 @@ The AD Command dashboard, running on a live domain controller.
 
 <div class="grid cards" markdown>
 
--   :material-shield-check:{ .lg .middle } **AD Command** &nbsp; <span class="status available">Available</span>
+-   :material-shield-check:{ .lg .middle } **AD Command** &nbsp; <span class="status soon">In development</span>
 
     ---
 
@@ -63,62 +57,54 @@ The AD Command dashboard, running on a live domain controller.
 
 </div>
 
-## What AD Command does
+## What 365 Command does
 
 <div class="grid cards" markdown>
 
--   :material-magnify-scan:{ .lg .middle } **Detect security risks**
+-   :material-file-chart:{ .lg .middle } **Report on your whole Microsoft 365 estate**
 
     ---
 
-    Scan your domain controllers against thirty-nine Active Directory controls covering privileged
-    access, delegation, Kerberos, LDAP, password policy and auditing. Every finding carries the
-    evidence behind it and remediation written as steps.
+    Users, guests, licences, groups, Exchange Online mailboxes, Microsoft Teams, SharePoint, OneDrive
+    and Intune devices. Surface inactive accounts, unused licences and access risks, then export to
+    CSV, Excel or PDF, or schedule a report by email.
 
-    Framework references are mappings, not a certification claim.
-
--   :material-pulse:{ .lg .middle } **Monitor the events that matter**
+-   :material-shield-check:{ .lg .middle } **See your security posture at a glance**
 
     ---
 
-    Privileged group changes, account lockouts, failed sign-ins and directory changes - each one
-    explained rather than listed.
+    Microsoft Secure Score, MFA registration and Conditional Access coverage, risky users, legacy
+    authentication and privileged accounts - with the findings that need attention surfaced first.
 
-    Read from **this controller's** Security log. Event logs do not replicate, and the console says
-    whose log it is reading rather than implying the whole domain.
-
--   :material-file-chart:{ .lg .middle } **Report on users, groups and access**
+-   :material-account-cog:{ .lg .middle } **Act without PowerShell**
 
     ---
 
-    Account risk, privileged access, password expiry, delegation, LAPS coverage, group hygiene,
-    stale computers and Group Policy. Exportable, and schedulable by email through your own SMTP
-    relay.
+    Onboard and offboard users, reset passwords and MFA, and manage licences, groups and directory
+    roles - individually or in bulk - taken straight from the report, with per-action permission
+    controls.
 
--   :material-heart-pulse:{ .lg .middle } **Deploy and keep it healthy**
-
-    ---
-
-    Promote a new forest or an additional controller with preflight checks and a promotion that
-    survives the reboot, then watch replication, FSMO roles, the global catalogue, DNS, time and
-    SYSVOL.
-
--   :material-eye-off:{ .lg .middle } **It does not change your directory**
+-   :material-bell-ring:{ .lg .middle } **Alerts and scheduled reports**
 
     ---
 
-    Every operation is a read. No code path writes to Active Directory, so there is no operation to
-    undo and no delegation to get wrong. Directory management is
-    [AD Command Pro](ad-command-pro.md), which runs where Active Directory can enforce what it may
-    do.
+    Be told about new administrators, guest accounts and risky users, and watch MFA coverage, Secure
+    Score and licence thresholds. Have any report delivered to your inbox on the cadence you choose.
 
--   :material-check-decagram:{ .lg .middle } **It says when it does not know**
+-   :material-earth:{ .lg .middle } **Manage every tenant from one console**
 
     ---
 
-    A control that could not read its setting reports Unknown and caps the score rather than
-    passing. It never reports a pass it did not measure, and it ships its own documentation because
-    a domain controller has no route to the Internet.
+    Connect multiple Microsoft 365 tenants and compare their security posture, findings and trends in
+    the MSP Global View. Delegate access with administrator, operator and viewer roles.
+
+-   :material-lock-check:{ .lg .middle } **Secure by design**
+
+    ---
+
+    Hosted in Microsoft Azure, read-only by default, with reporting and management permissions split
+    across separate Microsoft Entra applications. Consent is granted per tenant and can be revoked at
+    any time.
 
 </div>
 
