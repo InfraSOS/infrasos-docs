@@ -50,6 +50,11 @@ theme:
 extra_css:
   - assets/infrasos.css
 
+extra_javascript:
+  # Redirects surviving /latest/ and /0.2/ links (emails, the portal) to the
+  # same page at the root, via the 404 page. No-op on normal pages.
+  - assets/compat-redirect.js
+
 plugins:
   # Adding a plugins block disables the default search plugin, so re-list it.
   - search
