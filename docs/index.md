@@ -107,15 +107,3 @@ development, with placeholder pages so the structure of this site stays honest a
     any time.
 
 </div>
-
-## These guides also ship inside the product
-
-<div class="offline-note" markdown>
-A domain controller usually has no route to the Internet, and that is the correct configuration
-rather than an obstacle to work around. So AD Command carries its own copy of this documentation and
-renders it locally, under **Documentation** in the console.
-
-This site is the same content with search and a table of contents. If you are reading it because
-something is wrong with a domain controller, the copy on the machine itself will work when this one
-does not.
-</div>
