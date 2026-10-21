@@ -31,13 +31,22 @@ The Tenants page: connect a tenant, enable Actions, and refresh access.
 The consent is granted in the customer tenant's own directory and can be reviewed or revoked there
 at any time (Entra admin center → Enterprise applications).
 
-### Connecting a tenant you are not an administrator of
+### Invite a customer to connect their own tenant
 
-As an MSP or consultant you often do not hold admin rights in the customer's tenant. Consent must be
-granted by **their** administrator, so send the consent link to a Global Administrator in that
-tenant - they approve it in their own sign-in, and the tenant then appears in your console. You do
-not gain any standing access to their directory beyond what the application permissions allow, and
-they can revoke it on their side whenever they choose.
+As an MSP or consultant you often do not hold admin rights in the customer's tenant, and consent
+must be granted by **their** administrator. Rather than arranging delegated admin first, send them a
+secure onboarding link:
+
+1. On the **Tenants** page, choose **Invite a tenant**.
+2. Copy the generated link and send it to a **Global Administrator** in the customer's tenant.
+3. They open it, review Microsoft's admin-consent screen and **Accept**. No InfraSOS account, and no
+   sign-in to your console, is needed on their side.
+4. The tenant appears on your Tenants page automatically, the moment they approve.
+
+The link is signed and expires after 14 days. It grants only the read-only reporting application, so
+the most a mislaid link could do is let a tenant's own administrator connect that tenant to your
+console - which you can remove at any time. You never gain standing access to their directory beyond
+the application permissions, and they can revoke it on their side whenever they choose.
 
 ## Turn on management (Actions)
 
@@ -51,6 +60,12 @@ application as well:
 3. Assign the management application the **User Administrator** directory role in that tenant. Graph
    requires a directory role to change accounts, so without it the actions are consented but still
    refused. Two actions need a higher role - see [Permissions](permissions.md#directory-roles).
+
+!!! tip "Invite the customer to grant management"
+    If you do not hold admin rights in the customer's tenant, choose **Send link** next to **Enable
+    Actions** on that tenant's row. It generates a link, scoped to that one tenant, that their Global
+    Administrator opens to grant the management consent themselves - the same way as the reporting
+    invite above. The directory role in step 3 still has to be assigned in their tenant.
 
 Management is gated **per action**: each one is offered only when the specific permission it needs
 is present, so a tenant that consented before a newer action existed keeps everything else working
