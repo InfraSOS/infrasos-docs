@@ -141,4 +141,7 @@ nav:
       - Alerts: 365-command/alerts.md
       - MSP Global View: 365-command/global-view.md
       - Troubleshooting: 365-command/troubleshooting.md
+  - IT Admin Pro - Teams App:
+      - it-admin-pro/index.md
+      - Showing real names in reports: it-admin-pro/showing-real-names.md
   - Support: support.md
