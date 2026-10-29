@@ -143,5 +143,6 @@ nav:
       - Troubleshooting: 365-command/troubleshooting.md
   - IT Admin Pro - Teams App:
       - it-admin-pro/index.md
+      - Getting started: it-admin-pro/getting-started.md
       - Showing real names in reports: it-admin-pro/showing-real-names.md
   - Support: support.md
