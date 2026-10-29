@@ -5,6 +5,13 @@ connect a tenant with admin consent and work from a browser at
 [command.infrasos.com](https://command.infrasos.com) - there is nothing to install, and no agent or
 script runs anywhere in your environment.
 
+!!! tip "Not deployed yet? Deploy from the marketplace"
+    Get 365 Command straight from the Microsoft commercial marketplace. It starts a free trial, with
+    billing handled on your Microsoft invoice and no separate card to enter:
+    [**Get it on Microsoft Marketplace**](https://marketplace.microsoft.com/en-us/product/saas/infrasos.m365-admin-pro).
+
+    Already set up? Sign in at [command.infrasos.com](https://command.infrasos.com).
+
 It is **read-only by default**. Reporting needs only read access. Management - the actions that
 change a tenant - runs through a separate application that an administrator opts into per tenant, so
 no customer is shown a write-access consent screen they did not ask for. See
