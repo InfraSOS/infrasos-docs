@@ -56,9 +56,16 @@ Access is granted **once, for the whole tenant**, not per person.
     Once access is granted, the reports are available to **any signed-in user in your tenant** who
     opens the app, not only administrators. The reports include tenant-wide information such as
     users, licences, groups and security posture. Only **management actions** (changes) are
-    restricted to Global Administrators. If you want to limit who can see the reports, control who
-    is allowed to add and use the app with your Teams **app permission and setup policies** in the
-    Teams admin center.
+    restricted to Global Administrators.
+
+    - **To control who can open the app at all**, use your Teams **app permission and setup
+      policies** in the Teams admin center. This lets you allow the app only for specific people or
+      groups, such as your IT team.
+    - **If you need finer-grained, role-based access** - admin, operator and view-only roles,
+      invite-only membership, or limiting team members to specific tenants - use the
+      [365 Command](../365-command/index.md) web console instead. It is the same product, sharing one
+      subscription, with a full team and delegated-access model. See
+      [Team and access](../365-command/team-and-access.md).
 
 ## Enable management actions (optional)
 
