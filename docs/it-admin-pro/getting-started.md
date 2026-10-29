@@ -30,12 +30,18 @@ upgrade prompt.
 
 ## Grant access for live data
 
-Until an administrator grants access, the report pages show **sample data** and a Setup Guide prompts
-you to finish. To switch to your real tenant data, a **Global Administrator** opens the Setup Guide
-and chooses **Grant Access**. That is a single admin-consent step in your tenant's own Microsoft
+Until an administrator grants access, the report pages show **sample data**, and the left rail shows
+an amber **Setup Guide** button. To switch to your real tenant data, a **Global Administrator** opens
+it and chooses **Grant Access**. That is a single admin-consent step in your tenant's own Microsoft
 sign-in: it grants IT Admin Pro its read-only Microsoft Graph permissions and registers your
 organisation. From then on every page shows live data, fetched from Microsoft Graph on demand, with
 nothing stored by InfraSOS.
+
+!!! tip "Setup Guide vs Manage Tenant"
+    That left-rail button is the same entry in both states. Before access is granted it is the amber
+    **Setup Guide**; once your tenant is connected it becomes **Manage Tenant** (a gear icon). Both
+    open the same page, where you can re-run admin consent, check the connection, or remove the
+    tenant. Seeing **Manage Tenant** means your tenant is already connected and showing live data.
 
 ## Who needs to grant access
 
