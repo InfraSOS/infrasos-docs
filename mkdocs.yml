@@ -12,6 +12,9 @@ copyright: Copyright &copy; 2026 InfraSOS FZCO
 
 theme:
   name: material
+  # Local template overrides (see overrides/main.html, which adds Open Graph + Twitter Card meta
+  # so shared docs links render a proper title/description card; Material emits none by default).
+  custom_dir: overrides
   language: en
   logo: assets/logo.svg
   favicon: assets/favicon.svg

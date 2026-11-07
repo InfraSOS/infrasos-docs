@@ -1,0 +1,43 @@
+{#
+  Adds Open Graph + Twitter Card metadata to every page.
+
+  Material for MkDocs emits none of these by default (the built-in social plugin only generates
+  og:image cards and needs extra native deps), so shared docs links were previously flagged as
+  missing OG/Twitter tags. This override fills the gap with text-only tags derived from the page
+  title and description, which is all that's needed for a clean link preview.
+#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+
+  {# Title: "<page> - <site_name>", or just the site name on the home page. #}
+  {%- if page and page.title and not page.is_homepage -%}
+    {%- set og_title = page.title | striptags ~ " - " ~ config.site_name -%}
+  {%- else -%}
+    {%- set og_title = config.site_name -%}
+  {%- endif -%}
+
+  {# Description: the page's own meta description if set, else the site default. #}
+  {%- if page and page.meta and page.meta.description -%}
+    {%- set og_desc = page.meta.description -%}
+  {%- else -%}
+    {%- set og_desc = config.site_description -%}
+  {%- endif -%}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ og_title }}">
+  {%- if og_desc %}
+  <meta property="og:description" content="{{ og_desc }}">
+  {%- endif %}
+  {%- if page and page.canonical_url %}
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  {%- endif %}
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ og_title }}">
+  {%- if og_desc %}
+  <meta name="twitter:description" content="{{ og_desc }}">
+  {%- endif %}
+{% endblock %}
