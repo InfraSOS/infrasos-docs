@@ -46,6 +46,7 @@ Every report reads through the **InfraSOS Command** application using **Applicat
 | `UserAuthenticationMethod.Read.All` | Per-user MFA method detail | |
 | `DeviceManagementManagedDevices.Read.All` | Intune managed devices, compliance and at-risk | Needs an Intune licence |
 | `SharePointTenantSettings.Read.All` | Tenant-wide SharePoint sharing settings | |
+| `ServiceHealth.Read.All` | Microsoft 365 service health incidents and advisories, and the Service Health alert profile | |
 
 !!! note "A missing read permission never breaks the console"
     If a report needs a permission the tenant has not granted - or a licence it does not have - that
@@ -107,6 +108,37 @@ to the app does **not** assign these roles; it is a separate, deliberate step.
     User Administrator baseline. Treat them as advanced, opt-in actions: a customer can run every
     other management action without granting them. When one is attempted without its role, the
     failure names the exact role to assign.
+
+## Exchange Online (Mail) runner
+
+The **Exchange (Mail)** area is powered by a separate **InfraSOS EXO Runner** application. The core
+reporting app reads Microsoft Graph, but many Exchange features (message trace, mail-flow rules,
+mailbox permissions, protocol exposure, the unified audit log, retention and DLP policies) have no
+Graph equivalent, so they are read through Exchange Online and the Microsoft Purview endpoints using
+**application (app-only) certificate** authentication. The signing certificate lives on the InfraSOS
+side; you never handle a secret or certificate.
+
+Enabling the Exchange runner for a tenant is part of connecting the tenant, so there is nothing to
+install by hand. The one extra grant two of its tabs need is below.
+
+### Granting the Security and Compliance role
+
+Two tabs, **Audit Log** and **Compliance Policies**, read through the Microsoft 365 **Security &
+Compliance (Purview)** endpoint rather than Exchange Online, and that endpoint requires a **directory
+role** that app consent cannot grant on its own. Until it is assigned, those two tabs show a
+"permission required" notice instead of data; every other Exchange tab is unaffected.
+
+Assign the **InfraSOS EXO Runner** application the **Compliance Administrator** role (it includes the
+*View-Only Audit Logs* permission the unified audit log search requires):
+
+**Entra admin center → Roles and administrators → Compliance Administrator → Add assignments →**
+search for **InfraSOS EXO Runner → Add.**
+
+!!! note "After granting the role"
+    Role changes can take a few minutes to take effect; reopen the tab after a short wait. The
+    **unified audit log** also has ingestion latency, so recent actions can take 30 minutes or more to
+    appear, and **Compliance Policies** is empty until your tenant actually has retention, DLP or
+    eDiscovery policies configured.
 
 ## Keeping permissions current
 

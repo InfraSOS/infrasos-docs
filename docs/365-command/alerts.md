@@ -18,6 +18,13 @@ who has acknowledged each alert, and its status.
 
 ## What you can alert on
 
+<!-- MAINTAINER REMINDER (2026-11-12): keep this page in step with the alert catalogue in
+     packages/core-server/src/alertEngine.ts. "Service incident or advisory" (serviceHealth) was
+     added here on 2026-11-12. Other new profiles are deliberately NOT yet documented until they are
+     in PRODUCTION: "New high-privilege app consent" (riskyAppConsent), plus any redesigned Alert
+     Profiles category/channel options. When those ship to production, add them to BOTH tables below
+     and to the category copy. -->
+
 Profiles come in two kinds. **Change** alerts compare the tenant now against a stored baseline and
 fire only on genuinely new items. **Threshold** alerts fire when a number crosses a line you set.
 
@@ -29,6 +36,14 @@ fire only on genuinely new items. **Threshold** alerts fire when a number crosse
 | **MFA coverage** | Threshold | Coverage drops below your target (default 80%) | Attention |
 | **Secure Score** | Threshold | The score falls below your target percentage (default 50%) | Attention |
 | **Licence seats** | Threshold | Any SKU has fewer than N seats free (default 5) | Review |
+| **Service incident or advisory** | Change | Microsoft reports a new service incident or advisory affecting your tenant | Attention |
+
+!!! note "Service Health: incidents, advisories, or both"
+    The **Service incident or advisory** profile reads Microsoft's own Service Health for your tenant,
+    across Exchange, Teams, SharePoint, Entra ID, Intune and more, and fires when a new issue appears.
+    When you create it you choose what it triggers on: **Incidents only** (the default), **Advisories
+    only**, or **both**, so you can page on outages but stay quieter on advisories. It needs the
+    `ServiceHealth.Read.All` permission; grant it and use **Refresh permissions** on the Tenants page.
 
 !!! note "A change alert learns the tenant first"
     The first check of a change profile captures a **baseline** of what already exists and raises
@@ -49,6 +64,7 @@ moving thresholds are checked hourly.
 | **MFA coverage** | Hourly |
 | **Secure Score** | Hourly |
 | **Licence seats** | Hourly |
+| **Service incident or advisory** | 30 minutes |
 
 So a newly added administrator is normally detected within about 15 minutes, and emailed to the
 profile's recipients with **who made the change** where the directory audit log records it.
