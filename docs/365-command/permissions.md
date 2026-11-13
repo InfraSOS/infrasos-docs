@@ -118,10 +118,27 @@ Graph equivalent, so they are read through Exchange Online and the Microsoft Pur
 **application (app-only) certificate** authentication. The signing certificate lives on the InfraSOS
 side; you never handle a secret or certificate.
 
-Enabling the Exchange runner for a tenant is part of connecting the tenant, so there is nothing to
-install by hand. The one extra grant two of its tabs need is below.
+There is nothing to install by hand: enabling the runner for a tenant is a one-click step in the
+portal, described next. The one extra grant that two of its tabs need follows after.
+
+### Enable Exchange for a tenant
+
+On the **Tenants** page, find the tenant and select **Enable Exchange** in its row. You are taken to
+Microsoft's consent screen to approve the **InfraSOS EXO Runner** application for that tenant — a
+Global Administrator approves it, exactly as when connecting the tenant:
+
+![Approving the InfraSOS EXO Runner application for a tenant](../assets/screenshots/365-enable-exchange-consent.png)
+
+Select **Accept**. Back on the Tenants page the tenant shows a green **Exchange** badge and the
+Exchange (Mail) tabs begin returning live data. This grants the runner's Exchange access only; the two
+Purview tabs below need one extra role.
 
 ### Granting the Security and Compliance role
+
+!!! info "Enable Exchange first"
+    These two tabs light up only once the tenant has **[Enable Exchange](#enable-exchange-for-a-tenant)**
+    completed **and** the role below assigned. If you have not enabled Exchange for the tenant yet, do
+    that first — until then every Exchange tab, these two included, stays on sample data.
 
 Two tabs, **Audit Log** and **Compliance Policies**, read through the Microsoft 365 **Security &
 Compliance (Purview)** endpoint rather than Exchange Online, and that endpoint requires a **directory
