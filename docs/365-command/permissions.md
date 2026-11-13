@@ -123,15 +123,15 @@ portal, described next. The one extra grant that two of its tabs need follows af
 
 ### Enable Exchange for a tenant
 
-On the **Tenants** page, find the tenant and select **Enable Exchange** in its row. You are taken to
-Microsoft's consent screen to approve the **InfraSOS EXO Runner** application for that tenant — a
-Global Administrator approves it, exactly as when connecting the tenant:
+On the **Tenants** page, find the tenant and select **Enable Exchange** in its row:
 
-![Approving the InfraSOS EXO Runner application for a tenant](../assets/screenshots/365-enable-exchange-consent.png)
+![The Enable Exchange button on a tenant's row on the Tenants page](../assets/screenshots/365-enable-exchange.png)
 
-Select **Accept**. Back on the Tenants page the tenant shows a green **Exchange** badge and the
-Exchange (Mail) tabs begin returning live data. This grants the runner's Exchange access only; the two
-Purview tabs below need one extra role.
+You are taken to Microsoft's consent screen to approve the **InfraSOS EXO Runner** application for that
+tenant — a Global Administrator approves it, exactly as when connecting the tenant. Select **Accept**.
+Back on the Tenants page the tenant shows a green **Exchange** badge (as above) and the Exchange (Mail)
+tabs begin returning live data. This grants the runner's Exchange access only; the two Purview tabs
+below need one extra role.
 
 ### Granting the Security and Compliance role
 
