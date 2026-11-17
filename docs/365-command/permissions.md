@@ -157,6 +157,31 @@ search for **InfraSOS EXO Runner → Add.**
     appear, and **Compliance Policies** is empty until your tenant actually has retention, DLP or
     eDiscovery policies configured.
 
+### Granting the quarantine management role
+
+!!! info "Enable Exchange first"
+    Quarantine appears once the tenant has **[Enable Exchange](#enable-exchange-for-a-tenant)**
+    completed. *Reviewing* quarantined messages works with the runner's default **Global Reader** role;
+    *remediating* them (release, deny, download) needs the additional role below.
+
+The **Quarantine** tab lets you **release**, **release and allow the sender**, **deny (delete)** and
+**download** quarantined messages. Those are write operations in Exchange Online / Microsoft Defender,
+and the runner's read-only **Global Reader** role cannot perform them. Until the role below is assigned,
+those buttons return a *"permission required"* message; viewing the quarantine list is unaffected, and
+**Message Trace** (including **Download details**) is unaffected because it is read-only.
+
+Assign the **InfraSOS EXO Runner** application the **Security Administrator** role, which grants
+quarantine management:
+
+**Entra admin center → Roles and administrators → Security Administrator → Add assignments →** search
+for **InfraSOS EXO Runner → Add.**
+
+!!! note "Least privilege"
+    Security Administrator is the straightforward choice. If you prefer tighter scoping, any directory
+    role (or a custom role) that maps to the Microsoft Defender **quarantine** management permissions
+    will work; **Global Reader** alone does not. Role changes can take a few minutes to take effect, so
+    reopen the tab after a short wait.
+
 ## Keeping permissions current
 
 When 365 Command adds a capability that needs a new permission, connected tenants are flagged with
