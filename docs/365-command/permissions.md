@@ -157,43 +157,32 @@ search for **InfraSOS EXO Runner → Add.**
     appear, and **Compliance Policies** is empty until your tenant actually has retention, DLP or
     eDiscovery policies configured.
 
-### Granting the quarantine management role
+### Quarantine is read-only; remediate in Microsoft Defender
 
 !!! info "Enable Exchange first"
-    Quarantine appears once the tenant has **[Enable Exchange](#enable-exchange-for-a-tenant)**
-    completed. *Reviewing* quarantined messages works with the runner's default **Global Reader** role;
-    *remediating* them (release, deny, download) needs the additional role below.
+    The **Quarantine** tab appears once the tenant has **[Enable Exchange](#enable-exchange-for-a-tenant)**
+    completed. It reads through the runner's default **Global Reader** role — no extra role is needed.
 
-The **Quarantine** tab lets you **release**, **release and allow the sender**, **deny (delete)** and
-**download** quarantined messages. Those are write operations in Exchange Online / Microsoft Defender,
-and the runner's read-only **Global Reader** role cannot perform them. Until the role below is assigned,
-those buttons return a *"permission required"* message; viewing the quarantine list is unaffected, and
-**Message Trace** (including **Download details**) is unaffected because it is read-only.
+The **Quarantine** tab shows quarantined messages, why they were held, their status (**Pending Review**,
+**Released** or **Denied**), and lets you **download** the raw message (`.eml`) for inspection. These are
+all read operations and work out of the box.
 
-**The quickest way — Re-run setup.** On the **Tenants** page, the **Re-run setup** button on an
-Exchange-enabled tenant assigns the **InfraSOS EXO Runner** both the **Global Reader** and
-**Security Administrator** roles for you, as **direct** assignments. This is the recommended path
-because it avoids the PIM pitfall described below. After it completes, reopen the **Quarantine** tab;
-release/deny/download work once the role has propagated (usually a minute or two).
+**Releasing or denying (deleting) a quarantined message is done in Microsoft Defender, not in InfraSOS.**
+Microsoft authorises those actions against the **signed-in user's** quarantine permissions, and InfraSOS
+connects to Exchange Online with an **application identity** (app-only certificate) that has no user
+context — so release and deny cannot be performed from InfraSOS regardless of the directory roles the
+runner holds. The message drawer links straight to **Manage in Microsoft Defender**
+([security.microsoft.com/quarantine](https://security.microsoft.com/quarantine)), where you release, deny,
+preview and allow senders with your own admin permissions.
 
-!!! warning "Do not assign this role through PIM"
-    Microsoft's quarantine service **does not honour roles assigned through Privileged Identity
-    Management (PIM)** — see [Manage quarantined messages as an admin](https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files).
-    In a tenant with Microsoft Entra ID P2, the portal's **Add assignments** flow routes through PIM,
-    so a Security Administrator grant made that way will *look* assigned but quarantine actions still
-    fail with a generic *"server side error"*. Use **Re-run setup** (which creates a direct assignment
-    via Microsoft Graph), or assign the role through a tool that creates a direct (non-PIM) role
-    assignment.
-
-If you prefer to assign it manually (and your tenant does **not** use PIM), the role is:
-
-**Entra admin center → Roles and administrators → Security Administrator → Add assignments →** search
-for **InfraSOS EXO Runner → Add.**
-
-!!! note "Least privilege"
-    Security Administrator is the role Microsoft maps to quarantine management for all users; **Global
-    Reader** alone does not grant it. Role changes can take a few minutes to take effect, so reopen the
-    tab after a short wait.
+!!! note "No Security Administrator role is needed"
+    Earlier versions asked you to grant the runner the **Security Administrator** role (via **Re-run
+    setup** or manually) for quarantine actions. That is **no longer required or used** — app-only
+    quarantine writes aren't supported by Microsoft
+    ([reference](https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files)),
+    so the runner stays read-only. If you assigned it earlier, you can safely remove it for least
+    privilege: **Entra admin center → Roles and administrators → Security Administrator →
+    InfraSOS EXO Runner → Remove assignment.** **Re-run setup** now assigns only **Global Reader**.
 
 ## Keeping permissions current
 
