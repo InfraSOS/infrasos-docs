@@ -170,17 +170,30 @@ and the runner's read-only **Global Reader** role cannot perform them. Until the
 those buttons return a *"permission required"* message; viewing the quarantine list is unaffected, and
 **Message Trace** (including **Download details**) is unaffected because it is read-only.
 
-Assign the **InfraSOS EXO Runner** application the **Security Administrator** role, which grants
-quarantine management:
+**The quickest way — Re-run setup.** On the **Tenants** page, the **Re-run setup** button on an
+Exchange-enabled tenant assigns the **InfraSOS EXO Runner** both the **Global Reader** and
+**Security Administrator** roles for you, as **direct** assignments. This is the recommended path
+because it avoids the PIM pitfall described below. After it completes, reopen the **Quarantine** tab;
+release/deny/download work once the role has propagated (usually a minute or two).
+
+!!! warning "Do not assign this role through PIM"
+    Microsoft's quarantine service **does not honour roles assigned through Privileged Identity
+    Management (PIM)** — see [Manage quarantined messages as an admin](https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files).
+    In a tenant with Microsoft Entra ID P2, the portal's **Add assignments** flow routes through PIM,
+    so a Security Administrator grant made that way will *look* assigned but quarantine actions still
+    fail with a generic *"server side error"*. Use **Re-run setup** (which creates a direct assignment
+    via Microsoft Graph), or assign the role through a tool that creates a direct (non-PIM) role
+    assignment.
+
+If you prefer to assign it manually (and your tenant does **not** use PIM), the role is:
 
 **Entra admin center → Roles and administrators → Security Administrator → Add assignments →** search
 for **InfraSOS EXO Runner → Add.**
 
 !!! note "Least privilege"
-    Security Administrator is the straightforward choice. If you prefer tighter scoping, any directory
-    role (or a custom role) that maps to the Microsoft Defender **quarantine** management permissions
-    will work; **Global Reader** alone does not. Role changes can take a few minutes to take effect, so
-    reopen the tab after a short wait.
+    Security Administrator is the role Microsoft maps to quarantine management for all users; **Global
+    Reader** alone does not grant it. Role changes can take a few minutes to take effect, so reopen the
+    tab after a short wait.
 
 ## Keeping permissions current
 
