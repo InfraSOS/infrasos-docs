@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" width="860" height="330" role="img"
+     aria-label="AD Command runs as one Windows Service on the domain controller. A browser connects over HTTPS on port 8443 using Windows Integrated Authentication. The service reads Active Directory over LDAP and the local Security event log, keeps its own SQLite database, and sends scheduled reports to the customer's own SMTP relay.">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5a6b85"/>
+    </marker>
+    <style>
+      .b { fill: #ffffff; stroke: #e7ecf4; stroke-width: 1.5; rx: 8; }
+      .dc { fill: #f6f8fc; stroke: #c9d2df; stroke-width: 1.5; stroke-dasharray: 5 4; rx: 12; }
+      .store { fill: #eef4fb; stroke: #b8d2ee; stroke-width: 1.5; rx: 8; }
+      .svc { fill: #0f1626; stroke: #0f1626; rx: 8; }
+      .t { font: 600 13px system-ui, sans-serif; fill: #141b2b; }
+      .ts { font: 400 11px system-ui, sans-serif; fill: #5a6b85; }
+      .tw { font: 600 13px system-ui, sans-serif; fill: #ffffff; }
+      .tws { font: 400 11px system-ui, sans-serif; fill: #93a6c4; }
+      .l { stroke: #5a6b85; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+      .ll { font: 400 10px system-ui, sans-serif; fill: #5a6b85; }
+    </style>
+  </defs>
+
+  <rect class="dc" x="180" y="16" width="480" height="298"/>
+  <text class="ts" x="196" y="36">Domain controller</text>
+
+  <rect class="b" x="12" y="120" width="130" height="52"/>
+  <text class="t" x="28" y="142">Browser</text>
+  <text class="ts" x="28" y="158">admin's machine</text>
+
+  <rect class="b" x="205" y="56" width="180" height="52"/>
+  <text class="t" x="221" y="78">Kestrel · 8443</text>
+  <text class="ts" x="221" y="94">HTTPS, Negotiate</text>
+
+  <rect class="svc" x="205" y="140" width="180" height="58"/>
+  <text class="tw" x="221" y="164">AD Command</text>
+  <text class="tws" x="221" y="180">.NET 10, as SYSTEM</text>
+
+  <rect class="store" x="205" y="232" width="180" height="48"/>
+  <text class="t" x="221" y="252">SQLite</text>
+  <text class="ts" x="221" y="268">ProgramData</text>
+
+  <rect class="store" x="455" y="56" width="180" height="52"/>
+  <text class="t" x="471" y="78">Active Directory</text>
+  <text class="ts" x="471" y="94">LDAP · read only</text>
+
+  <rect class="store" x="455" y="140" width="180" height="52"/>
+  <text class="t" x="471" y="162">Security event log</text>
+  <text class="ts" x="471" y="178">this controller only</text>
+
+  <rect class="b" x="700" y="232" width="146" height="52"/>
+  <text class="t" x="716" y="254">Your SMTP relay</text>
+  <text class="ts" x="716" y="270">optional, outbound</text>
+
+  <path class="l" d="M142 146 H 295 V 112"/>
+  <text class="ll" x="150" y="140">HTTPS 8443</text>
+
+  <path class="l" d="M295 108 V 136"/>
+
+  <path class="l" d="M385 158 H 451"/>
+  <text class="ll" x="392" y="152">search</text>
+
+  <path class="l" d="M385 150 H 420 V 86 H 451"/>
+
+  <path class="l" d="M295 198 V 228"/>
+
+  <path class="l" d="M385 186 H 545 V 210 H 770 V 228"/>
+  <text class="ll" x="600" y="205">scheduled reports</text>
+</svg>
