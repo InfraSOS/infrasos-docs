@@ -176,13 +176,11 @@ runner holds. The message drawer links straight to **Manage in Microsoft Defende
 preview and allow senders with your own admin permissions.
 
 !!! note "No Security Administrator role is needed"
-    Earlier versions asked you to grant the runner the **Security Administrator** role (via **Re-run
-    setup** or manually) for quarantine actions. That is **no longer required or used** — app-only
-    quarantine writes aren't supported by Microsoft
+    Quarantine actions aren't performed from InfraSOS, so the runner needs no **Security Administrator**
+    (or other quarantine) role — **Global Reader** already covers everything the Quarantine tab reads.
+    App-only quarantine writes aren't supported by Microsoft
     ([reference](https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files)),
-    so the runner stays read-only. If you assigned it earlier, you can safely remove it for least
-    privilege: **Entra admin center → Roles and administrators → Security Administrator →
-    InfraSOS EXO Runner → Remove assignment.** **Re-run setup** now assigns only **Global Reader**.
+    which is why remediation happens in Microsoft Defender.
 
 ## Keeping permissions current
 
