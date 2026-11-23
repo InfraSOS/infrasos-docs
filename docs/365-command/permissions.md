@@ -182,6 +182,49 @@ preview and allow senders with your own admin permissions.
     ([reference](https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files)),
     which is why remediation happens in Microsoft Defender.
 
+### Mailbox delegation (Full Access / Send As)
+
+!!! info "Enable Exchange first"
+    The **Permissions** tab appears once the tenant has **[Enable Exchange](#enable-exchange-for-a-tenant)**
+    completed. **Viewing** delegation (who has Full Access, Send As and Send on Behalf on each mailbox) and
+    the governance columns (hidden-from-GAL, litigation hold, archive, retention) work out of the box under
+    the runner's default **Global Reader** role — no extra role is needed.
+
+**Granting or removing** a delegate is a write, and Exchange requires the runner to hold the **Mail
+Recipients** management role on the tenant. This is an *Exchange management role*, not an Entra directory
+role, so it is assigned in **Exchange Online PowerShell** (the Entra portal and app consent cannot grant
+it). Until it is assigned, the Grant / Remove controls show a setup notice instead of running.
+
+Sign in to Exchange Online as an **Exchange Administrator** (or Global Administrator) and run:
+
+```powershell
+Connect-ExchangeOnline
+
+# InfraSOS EXO Runner application id (the same for every tenant):
+$appId = "750709b4-79b6-478d-a6dc-787e5aa8a89b"
+
+# Find the runner's Exchange service principal (created when you enabled Exchange):
+$sp = Get-ServicePrincipal | Where-Object { $_.AppId -eq $appId }
+
+# Assign the Mail Recipients role to it:
+New-ManagementRoleAssignment -Role "Mail Recipients" -App $sp.ObjectId
+```
+
+Confirm it covers the delegation cmdlets:
+
+```powershell
+Get-ManagementRole -Cmdlet Add-MailboxPermission      # should list "Mail Recipients"
+Get-ManagementRoleAssignment -RoleAssignee "InfraSOS EXO Runner"
+```
+
+!!! note "After granting the role"
+    Exchange builds the application's available-cmdlet set from its roles **at connection time**, and the
+    role assignment can take **up to an hour** to propagate. After granting it, click **Refresh Exchange**
+    on the **Tenants** page (this reconnects the runner so it picks up the new role), then reload the
+    **Permissions** tab. If the Grant / Remove controls are still greyed out, the change is still
+    propagating — wait a little longer and reload again. Calendar and folder delegation remain view-only
+    for now.
+
 ## Keeping permissions current
 
 When 365 Command adds a capability that needs a new permission, connected tenants are flagged with
