@@ -149,9 +149,12 @@ Open a policy to manage it from its detail panel:
 - **Apply baseline** writes the Standard preset to that one policy.
 - **Enable or disable** turns a custom policy on or off by toggling its rule. The default policy has
   no rule and is always on, so it cannot be disabled (the panel says so).
+- **Edit** opens the policy's settings in place (for example the spam, phishing and bulk actions, the
+  zero-hour auto-purge toggles, or the phishing threshold) and saves only what you change.
+- **Clone** copies the policy's settings into a new policy, with a rule for the scope you choose.
+- **Delete** removes a custom policy and its rule. The default policy cannot be deleted.
 
-Both are offered only for the four manageable types above, Admin-only, Pro. Editing a policy's
-individual settings and cloning a policy are on the way.
+All are offered only for the four manageable types above, Admin-only, Pro.
 
 ## What the runner needs
 
@@ -171,6 +174,8 @@ roles only for the actions it actually wants to use.
 
 ## The audit trail
 
-Every Mail action is written to the same per-tenant [Audit](management-actions.md#the-audit-trail)
-view as the rest of management: who did it, what, to whom, and whether it succeeded. The trail is
-immutable, so delegating Mail management to a team never means losing track of who changed what.
+Every Mail action is written to the same per-tenant
+[action history](management-actions.md#the-audit-trail) as the rest of management, in the portal
+under **InfraSOS Log**: who did it, what, to whom, and whether it succeeded. The trail is immutable,
+so delegating Mail management to a team never means losing track of who changed what. The
+**Entra Audit Log** view covers directory-level auditing beyond 365 Command.

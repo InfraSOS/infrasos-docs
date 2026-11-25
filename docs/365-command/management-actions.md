@@ -79,6 +79,13 @@ exactly which role to assign. See [Permissions → Directory roles](permissions.
 
 ## The audit trail
 
-The **Audit** view lists every management action taken through 365 Command for a tenant, newest
-first, with the operator, the action, the target and whether it succeeded. Because delegation to a
-team should never mean losing track of who did what, the trail is immutable.
+Every management action is recorded. You review it in the portal under **InfraSOS Log**, on the
+**Action history** tab: it lists every action taken through 365 Command for a tenant, newest first,
+with the operator, the action, the target and whether it succeeded. Because delegation to a team
+should never mean losing track of who did what, the trail is immutable and cannot be edited or
+deleted. (The same page's **Diagnostics** tab is the application log, for troubleshooting rather than
+auditing.)
+
+For auditing beyond what was done through 365 Command, the **Entra Audit Log** view shows the
+tenant's own Microsoft Entra (Azure AD) directory audit events, so you can corroborate a change
+against the source of truth in Entra, and see directory changes made outside 365 Command as well.
