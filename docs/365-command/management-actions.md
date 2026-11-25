@@ -50,7 +50,8 @@ The **offboarding** wizard runs the whole leaver process from one panel, each st
 confirmed: block sign-in, revoke sessions and reset the password, reassign owned groups and direct
 reports, remove inbox rules, revoke app consents, disable devices, and reclaim licences. Mailbox
 steps that depend on Exchange Online (convert to shared, delegate access, set an out-of-office, hide
-from the address list) are rolling out as the Exchange integration lands.
+from the address list) are rolling out as the Exchange integration lands. The full set of mailbox,
+mail flow, recipient and email-security actions is in [Exchange (Mail)](exchange.md).
 
 ![The offboarding wizard running the leaver checklist](../assets/screenshots/365-offboard.png)
 /// caption
