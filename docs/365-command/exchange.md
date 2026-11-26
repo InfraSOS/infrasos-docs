@@ -34,8 +34,10 @@ The area is organised into tabs, grouped into reporting and management:
 
 ## Plans
 
-- The **Mail** area is included from the **Standard** plan up: the reports, and the mailbox, mail
-  flow, recipient and delegation management.
+- Exchange (Mail) **reporting** (mailboxes, mail flow, message trace, forwarding and the recipient
+  reports) is included from the **Basic** plan.
+- Exchange (Mail) **management** (mailbox, mail flow, recipient and delegation actions) is included
+  from the **Standard** plan up.
 - The **email security and compliance** tabs (email security policies, the tenant allow/block list,
   the unified audit log, and DLP, retention and eDiscovery) are a **Pro** feature. On a lower plan
   those tabs show sample data with an upgrade prompt, so you can see what they do before you buy.
