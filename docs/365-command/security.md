@@ -46,3 +46,14 @@ need the management application plus the relevant permission. The security table
 action**, so a tenant that has not enabled a given write permission still gets the full assessment
 and simply sees that one action disabled with its reason. See
 [Management actions](management-actions.md).
+
+## Change auditing
+
+Beyond the posture assessment, the **[Entra Audit Log](entra-audit-log.md)** shows the directory's
+change history - who created, changed or deleted users, groups, roles, policies and app consents, with
+the actor, their IP and the before-and-after of each change - for training, compliance and incident
+response.
+
+Email-security posture (Exchange Online Protection coverage, the recommended-baseline gaps, and the
+tenant allow/block list) is assessed and managed in the
+[Exchange (Mail)](exchange.md#email-security-policies-pro) area.

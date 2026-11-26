@@ -22,6 +22,11 @@ Microsoft Graph, so what you see is the tenant as it is now, not a nightly snaps
 A report: searchable and filterable, with chooseable columns and export to CSV, HTML or PDF.
 ///
 
+!!! note "The full Exchange (Mail) area"
+    The **Mail** report is the reporting slice of a larger **[Exchange (Mail)](exchange.md)** area that
+    also covers message trace, mail flow rules, distribution lists, mailbox delegation, holds and email
+    security, with the actions to manage them.
+
 ## Working with a table
 
 Every report shares the same controls, so what you learn on one applies to all:

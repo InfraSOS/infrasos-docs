@@ -138,6 +138,7 @@ nav:
       - Security and data handling: 365-command/security-and-data.md
       - Reporting: 365-command/reporting.md
       - Security: 365-command/security.md
+      - Entra Audit Log: 365-command/entra-audit-log.md
       - Management actions: 365-command/management-actions.md
       - Exchange (Mail): 365-command/exchange.md
       - Intune: 365-command/intune.md

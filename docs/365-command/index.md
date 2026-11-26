@@ -35,6 +35,8 @@ The overview: a connected tenant's headline counts and what most needs attention
   group membership, onboard a starter and offboard a leaver through guided wizards, and run the same
   actions in bulk. Every change confirms first and is written to an audit trail. See
   [Management actions](management-actions.md).
+- **Exchange (Mail).** Mailboxes, mail flow, message trace, distribution lists, delegation, holds and
+  email security, as reports you can read and actions you can run. See [Exchange (Mail)](exchange.md).
 - **Scheduled reports.** Have any core report arrive by email as an Excel attachment on a daily,
   weekly or monthly cadence. See [Scheduled reports](scheduled-reports.md).
 - **Alerts.** Be emailed when something changes - a new administrator or guest, a risky user, or MFA
@@ -82,6 +84,7 @@ Evaluating the service: [Security and data handling](security-and-data.md) cover
 hosted and secured, and exactly what it stores.
 
 Already connected: [Reporting](reporting.md), [Security](security.md),
+[Exchange (Mail)](exchange.md), the [Entra Audit Log](entra-audit-log.md),
 [Management actions](management-actions.md), [Intune](intune.md),
 [Scheduled reports](scheduled-reports.md), [Alerts](alerts.md) and
 [MSP Global View](global-view.md).

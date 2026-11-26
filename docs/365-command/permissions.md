@@ -225,6 +225,14 @@ Get-ManagementRoleAssignment -RoleAssignee "InfraSOS EXO Runner"
     propagating — wait a little longer and reload again. Calendar and folder delegation remain view-only
     for now.
 
+### Email security, mail flow and tenant allow/block writes
+
+Managing **email security policies**, the **tenant allow/block list** and **mail-flow (transport)
+rules** needs the runner's **Transport Hygiene** Exchange management role, assigned in Exchange Online
+PowerShell the same way as the **Mail Recipients** role above. Viewing these works under the runner's
+default Global Reader; only the writes need the role. The full role-to-action map is in
+[Exchange (Mail) → What the runner needs](exchange.md#what-the-runner-needs).
+
 ## Keeping permissions current
 
 When 365 Command adds a capability that needs a new permission, connected tenants are flagged with
